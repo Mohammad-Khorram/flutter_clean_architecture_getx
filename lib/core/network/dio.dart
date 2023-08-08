@@ -6,7 +6,7 @@ class DioCore {
   late Map<String, String> header;
   late Map<String, String> headerWithToken;
 
-  DioCore(this.dio) {
+  DioCore() {
     dio = Dio();
     header = {'Content-Type': 'application/json', 'Connection': 'keep-alive'};
     headerWithToken = {

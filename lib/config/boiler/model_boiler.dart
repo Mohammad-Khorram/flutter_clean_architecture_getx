@@ -1,0 +1,1 @@
+export 'package:crypto_currency/feature/other/data/model/language_model.dart';
