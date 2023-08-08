@@ -1,9 +1,10 @@
+import 'package:crypto_currency/config/boiler/controller_boiler.dart';
 import 'package:get/get.dart';
 
 class HomeBinding extends Bindings {
   @override
   void dependencies() {
-    /*Get.lazyPut<HomeController>(
+    Get.lazyPut<HomeController>(
       () => HomeController(Get.find<HomeRepository>()),
       fenix: true,
     );
@@ -16,6 +17,6 @@ class HomeBinding extends Bindings {
     Get.lazyPut<HomeRemoteDataSource>(
       () => HomeRemoteDataSourceImp(Get.find<DioCore>()),
       fenix: true,
-    );*/
+    );
   }
 }

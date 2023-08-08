@@ -61,7 +61,7 @@ abstract class BaseView<Controller extends BaseController>
 
   PreferredSizeWidget? appBar(context) => null;
 
-  Widget body(context);
+  Widget body(BuildContext context);
 
   Widget? drawer() => null;
 

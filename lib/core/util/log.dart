@@ -3,7 +3,7 @@ import 'package:logger/logger.dart';
 class LogCore {
   static void debug(dynamic message) {
     Logger logger = Logger();
-    Logger.level = Level.verbose;
+    Logger.level = Level.trace;
     logger.d(message);
   }
 
@@ -21,8 +21,8 @@ class LogCore {
 
   static void wtf(dynamic message) {
     Logger logger = Logger();
-    Logger.level = Level.wtf;
-    logger.wtf(message);
+    Logger.level = Level.fatal;
+    logger.f(message);
   }
 
   static void info(dynamic message) {

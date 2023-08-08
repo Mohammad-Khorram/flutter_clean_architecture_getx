@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:crypto_currency/config/boiler/util_boiler.dart';
 
 class DioCore {
   late Dio dio;
