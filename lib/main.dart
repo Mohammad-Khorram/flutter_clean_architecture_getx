@@ -18,7 +18,7 @@ void main() {
           title: 'appName'.tr,
           theme: ThemeConfig.lightTheme,
           darkTheme: ThemeConfig.darkTheme,
-          themeMode: ThemeMode.system,
+          themeMode: ThemeMode.light,
           locale: const Locale('en'),
           fallbackLocale: const Locale('en'),
           translations: LangCore(),

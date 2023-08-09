@@ -1,13 +1,8 @@
 class PathCore {
   static const mainUrl = 'https://fakestoreapi.com';
 
-  // product
-  static const product = '$mainUrl/products';
-  static const productWithCategory = '$mainUrl/products/category';
-  static const productDetails = '$mainUrl/products';
-
-  // category
-  static const category = '$mainUrl/products/categories';
+  // home
+  static const home = '$mainUrl/products';
 
   // auth
   static const login = '$mainUrl/auth/login';

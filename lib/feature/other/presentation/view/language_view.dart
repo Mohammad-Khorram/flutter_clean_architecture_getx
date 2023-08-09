@@ -37,7 +37,7 @@ class LanguageView extends BaseView<LanguageController> {
             value: controller.languageListModel.languageItemList[index].value,
             selected:
                 controller.languageListModel.languageItemList[index].value ==
-                    controller.selectedLangValue,
+                    controller.selectedValue,
             onTap: () => controller.changeLanguage(
                 title:
                     controller.languageListModel.languageItemList[index].title,

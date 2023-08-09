@@ -1,10 +1,10 @@
 import 'package:crypto_currency/config/boiler/base_boiler.dart';
 import 'package:crypto_currency/config/boiler/controller_boiler.dart';
-import 'package:crypto_currency/config/boiler/resource_boiler.dart';
 import 'package:crypto_currency/config/boiler/widget_boiler.dart';
+import 'package:crypto_currency/config/routing/route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:ionicons/ionicons.dart';
 
 class HomeView extends BaseView<HomeController> {
   static const String route = '/';
@@ -18,22 +18,19 @@ class HomeView extends BaseView<HomeController> {
 
   PreferredSizeWidget appBarView() {
     return AppBarWidget().appBar(
-      title: AppBarWidget().appBarTitle(title: ''.tr),
-      leading: AppBarWidget().backAction(),
+      title: AppBarWidget().appBarTitle(title: 'appName'.tr),
+      centerTitle: true,
+      actions: [
+        AppBarWidget().appBarIconAction(
+          icon: Ionicons.person_circle_outline,
+          action: () => Get.toNamed(RouteConfig.language),
+        ),
+      ],
     );
   }
 
   Widget bodyView() {
-    return Container(
-      padding: SpacingConfig.s20Horizontal,
-      alignment: Alignment.topRight,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(height: SizeConfig.s20.r),
-
-        ],
-      ),
-    );
+    return GetBuilder<LanguageController>(
+        builder: (_) => Text(controller.languageController.selectedTitle));
   }
 }

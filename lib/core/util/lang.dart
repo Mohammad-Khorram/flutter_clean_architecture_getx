@@ -8,7 +8,7 @@ class LangCore extends Translations {
           // general
           'lang': 'en',
           'direction': 'ltr',
-          'appName': 'Fake Store',
+          'appName': 'Crypto Currency',
           'connectionError': 'Unable to connect with the server. Check your internet connection and try again.',
           'generalError': 'The desired operation was associated with an error. Please try again later.',
           'notFoundError': 'The page you are looking for could not be found!',

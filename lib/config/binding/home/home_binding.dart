@@ -1,4 +1,7 @@
 import 'package:crypto_currency/config/boiler/controller_boiler.dart';
+import 'package:crypto_currency/config/boiler/remote_data_source_boiler.dart';
+import 'package:crypto_currency/config/boiler/repository_boiler.dart';
+import 'package:crypto_currency/core/network/dio.dart';
 import 'package:get/get.dart';
 
 class HomeBinding extends Bindings {
@@ -10,12 +13,12 @@ class HomeBinding extends Bindings {
     );
 
     Get.lazyPut<HomeRepository>(
-      () => HomeRepositoryImp(Get.find<HomeRemoteDataSource>()),
+      () => HomeRepositoryImpl(Get.find<HomeRemoteDataSource>()),
       fenix: true,
     );
 
     Get.lazyPut<HomeRemoteDataSource>(
-      () => HomeRemoteDataSourceImp(Get.find<DioCore>()),
+      () => HomeRemoteDataSourceImpl(Get.find<DioCore>()),
       fenix: true,
     );
   }

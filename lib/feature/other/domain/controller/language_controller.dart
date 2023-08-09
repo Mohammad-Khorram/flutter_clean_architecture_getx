@@ -1,5 +1,6 @@
 import 'package:crypto_currency/config/boiler/base_boiler.dart';
 import 'package:crypto_currency/config/boiler/model_boiler.dart';
+import 'package:crypto_currency/config/boiler/util_boiler.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -8,10 +9,10 @@ class LanguageController extends BaseController {
   late LanguageListModel languageListModel;
 
   // selected_values
-  String selectedLangTitle = 'English';
-  String selectedLangValue = 'en';
+  String selectedTitle = 'English';
+  String selectedValue = 'en';
 
-  // SecureStorageCore storage = Get.find()<SecureStorageCore>();
+  SecureStorageCore storage = Get.find<SecureStorageCore>();
 
   @override
   void onInit() {
@@ -32,9 +33,10 @@ class LanguageController extends BaseController {
   }
 
   void changeLanguage({required String title, required String value}) {
-    // storage.writeValue(key: 'lang', value: value);
-    selectedLangTitle = title;
-    selectedLangValue = value;
+    storage.writeValue(key: 'lang_title', value: title);
+    storage.writeValue(key: 'lang_value', value: value);
+    selectedTitle = title;
+    selectedValue = value;
     Get.updateLocale(Locale(value));
   }
 }
