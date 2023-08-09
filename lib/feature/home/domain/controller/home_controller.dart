@@ -7,8 +7,6 @@ import 'package:get/get.dart';
 class HomeController extends BaseController {
   SecureStorageCore storage = Get.find<SecureStorageCore>();
 
-  LanguageController languageController = Get.find<LanguageController>();
-
   HomeController(this._repo);
 
   final HomeRepository _repo;
@@ -28,6 +26,6 @@ class HomeController extends BaseController {
 
     String langTitle = await storage.fetchValue(key: 'lang_title');
     String langValue = await storage.fetchValue(key: 'lang_value');
-    languageController.changeLanguage(title: langTitle, value: langValue);
+    Get.find<LanguageController>().changeLanguage(title: langTitle, value: langValue);
   }
 }

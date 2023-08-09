@@ -1,14 +1,12 @@
+import 'package:crypto_currency/config/boiler/controller_boiler.dart';
 import 'package:get/get.dart';
 
-class AuthBinding extends Bindings {
+class UserBinding extends Bindings {
   @override
   void dependencies() {
-    /*Get.lazyPut<HomeController>(
-      () => HomeController(Get.find<HomeRepository>()),
-      fenix: true,
-    );
+    Get.lazyPut<UserController>(() => UserController(), fenix: true);
 
-    Get.lazyPut<HomeRepository>(
+    /*Get.lazyPut<HomeRepository>(
       () => HomeRepositoryImp(Get.find<HomeRemoteDataSource>()),
       fenix: true,
     );

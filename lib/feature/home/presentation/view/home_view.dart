@@ -23,14 +23,13 @@ class HomeView extends BaseView<HomeController> {
       actions: [
         AppBarWidget().appBarIconAction(
           icon: Ionicons.person_circle_outline,
-          action: () => Get.toNamed(RouteConfig.language),
+          action: () => Get.toNamed(RouteConfig.user),
         ),
       ],
     );
   }
 
   Widget bodyView() {
-    return GetBuilder<LanguageController>(
-        builder: (_) => Text(controller.languageController.selectedTitle));
+    return Text('home');
   }
 }

@@ -10,7 +10,7 @@ class MainBinding implements Bindings {
     Get.lazyPut(SecureStorageCore.new, fenix: true);
 
     HomeBinding().dependencies();
-    AuthBinding().dependencies();
+    UserBinding().dependencies();
     OtherBinding().dependencies();
   }
 }

@@ -5,3 +5,4 @@ export 'package:crypto_currency/feature/other/domain/controller/terms_controller
 export 'package:crypto_currency/feature/other/domain/controller/privacy_controller.dart';
 export 'package:crypto_currency/feature/other/domain/controller/not_found_controller.dart';
 export 'package:crypto_currency/feature/home/domain/controller/home_controller.dart';
+export 'package:crypto_currency/feature/user/domain/controller/user_controller.dart';

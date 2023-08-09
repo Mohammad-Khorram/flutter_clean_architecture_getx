@@ -7,6 +7,9 @@ class PageConfig {
     // home
     GetPage(name: RouteConfig.home, page: HomeView.new),
 
+    // user
+    GetPage(name: RouteConfig.user, page: UserView.new),
+
     // other
     GetPage(name: RouteConfig.language, page: LanguageView.new),
     GetPage(name: RouteConfig.ask, page: AskView.new),

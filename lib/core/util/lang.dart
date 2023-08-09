@@ -23,19 +23,8 @@ class LangCore extends Translations {
           'parsingDataError': 'Sorry, there was an error parsing the data. Please try again later.\nIf you continue to see this error, please contact our support team for assistance.',
           'errorAction': 'Try again',
 
-          // home
-          'homeBnvHome': 'Home',
-          'homeBnvCategory': 'Category',
-          'homeBnvUser': 'User',
-
-          // product_details
-          'productSortTitle': 'Sort by',
-          'productSortAscending': 'Ascending',
-          'productSortDescending': 'Descending',
-
-          // product_details
-          'productDetailsAddToCart': 'Add to Cart',
-          'productDetailsAddToCartMessage': 'The specified product has been successfully added to the cart.',
+          // user
+          'userTitle': 'User',
 
           // login
           'loginPrompt': 'Login to account',
@@ -100,20 +89,6 @@ class LangCore extends Translations {
           'parsingDataError': 'با عرض پوزش، در تجزیه داده\u200cها خطایی رخ داده است. لطفاً بعداً دوباره امتحان کنید.\nاگر هم\u200cچنان این خطا را مشاهده می‌کنید، لطفاً برای کمک با تیم پشتیبانی ما تماس بگیرید.',
           'errorAction': 'تلاش مجدد',
 
-          // home
-          'homeBnvHome': 'خانه',
-          'homeBnvCategory': 'دسته\u200cبندی',
-          'homeBnvUser': 'ناحیه کاربری',
-
-          // product_details
-          'productSortTitle': 'مرتب\u200cسازی بر اساس',
-          'productSortAscending': 'صعودی',
-          'productSortDescending': 'نزولی',
-
-          // product_details
-          'productDetailsAddToCart': 'افزودن به سبد خرید',
-          'productDetailsAddToCartMessage': 'محصول موردنظر با موفقیت به سبد خرید اضافه شد.',
-
           // login
           'loginPrompt': 'ورود به حساب کاربری',
           'loginTitle': 'ورود',
@@ -176,20 +151,6 @@ class LangCore extends Translations {
           'badRequestError': 'الطلب غير صالح. يرجى التحقق من الطلب وحاول مرة أخرى.',
           'parsingDataError': 'آسف، حدث خطأ في تحليل البيانات. يرجى المحاولة مرة أخرى لاحقًا.\nإذا استمر ظهور هذا الخطأ، فيرجى الاتصال بفريق الدعم للحصول على المساعدة.',
           'errorAction': 'حاول ثانية',
-
-          // home
-          'homeBnvHome': 'بيت',
-          'homeBnvCategory': 'فئة',
-          'homeBnvUser': 'مستخدم',
-
-          // product_details
-          'productSortTitle': 'ترتيب حسب',
-          'productSortAscending': 'تصاعدي',
-          'productSortDescending': 'تنازلي',
-
-          // product_details
-          'productDetailsAddToCart': 'أضف إلى السلة',
-          'productDetailsAddToCartMessage': 'تمت إضافة المنتج المحدد بنجاح إلى سلة التسوق.',
 
           // login
           'loginPrompt': 'تسجيل الدخول إلى الحساب',
@@ -254,20 +215,6 @@ class LangCore extends Translations {
           'parsingDataError': 'Lo sentimos, hubo un error al analizar los datos. Vuelva a intentarlo más tarde.\nSi continúa viendo este error, comuníquese con nuestro equipo de soporte para obtener ayuda.',
           'errorAction': 'TIntentar otra vez',
 
-          // home
-          'homeBnvHome': 'Hogar',
-          'homeBnvCategory': 'Categoría',
-          'homeBnvUser': 'Usuario',
-
-          // product_details
-          'productSortTitle': 'Ordenar por',
-          'productSortAscending': 'ascendente',
-          'productSortDescending': 'Descendente',
-
-          // product_details
-          'productDetailsAddToCart': 'añadir a la cesta',
-          'productDetailsAddToCartMessage': 'El producto especificado se ha añadido correctamente al carrito.',
-
           // login
           'loginPrompt': 'Iniciar sesión en la cuenta',
           'loginTitle': 'Acceso',
@@ -330,20 +277,6 @@ class LangCore extends Translations {
           'badRequestError': 'La demande était invalide. Veuillez vérifier la demande et réessayer.',
           'parsingDataError': 'Désolé, une erreur s\'est produite lors de l\'analyse des données. Veuillez réessayer plus tard.\nSi vous continuez à voir cette erreur, veuillez contacter notre équipe d\'assistance pour obtenir de l\'aide.',
           'errorAction': 'Essayer à nouveau',
-
-          // home
-          'homeBnvHome': 'Maison',
-          'homeBnvCategory': 'Catégorie',
-          'homeBnvUser': 'Utilisateur',
-
-          // product_details
-          'productSortTitle': 'Trier par',
-          'productSortAscending': 'Ascendant',
-          'productSortDescending': 'Descendant',
-
-          // product_details
-          'productDetailsAddToCart': 'Ajouter au panier',
-          'productDetailsAddToCartMessage': 'Le produit spécifié a été ajouté au panier avec succès.',
 
           // login
           'loginPrompt': 'Connectez-vous au compte',
@@ -408,20 +341,6 @@ class LangCore extends Translations {
           'parsingDataError': '抱歉，解析数据时出错。 请稍后重试。\n如果您仍然看到此错误，请联系我们的支持团队寻求帮助。',
           'errorAction': '再试一次',
 
-          // home
-          'homeBnvHome': '家',
-          'homeBnvCategory': '类别',
-          'homeBnvUser': '用户',
-
-          // product_details
-          'productSortTitle': '排序方式',
-          'productSortAscending': '上升',
-          'productSortDescending': '降序',
-
-          // product_details
-          'productDetailsAddToCart': '添加到购物车',
-          'productDetailsAddToCartMessage': '指定的产品已成功添加到购物车。',
-
           // login
           'loginPrompt': '登录帐户',
           'loginTitle': '登录',
@@ -484,20 +403,6 @@ class LangCore extends Translations {
           'badRequestError': 'अनुरोध अमान्य था. कृपया अनुरोध की जाँच करें और पुनः प्रयास करें।',
           'parsingDataError': 'क्षमा करें, डेटा पार्स करने में त्रुटि हुई। कृपया बाद में पुनः प्रयास करें।\nयदि आपको यह त्रुटि दिखाई देती रहती है, तो कृपया सहायता के लिए हमारी सहायता टीम से संपर्क करें।',
           'errorAction': 'पुनः प्रयास करें',
-
-          // home
-          'homeBnvHome': 'घर',
-          'homeBnvCategory': 'वर्ग',
-          'homeBnvUser': 'उपयोगकर्ता',
-
-          // product_details
-          'productSortTitle': 'इसके अनुसार क्रमबद्ध करें',
-          'productSortAscending': 'आरोही',
-          'productSortDescending': 'अवरोही',
-
-          // product_details
-          'productDetailsAddToCart': 'कार्ट में जोड़ें',
-          'productDetailsAddToCartMessage': 'निर्दिष्ट उत्पाद को कार्ट में सफलतापूर्वक जोड़ दिया गया है।',
 
           // login
           'loginPrompt': 'खाते में लॉगिन करें',
