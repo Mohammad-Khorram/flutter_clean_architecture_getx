@@ -10,6 +10,6 @@ class HomeRepositoryImpl extends HomeRepository {
   HomeRepositoryImpl(this.homeRemoteDataSource);
 
   @override
-  Future<Either<NetworkException, HomeResponseModel>> getCrypto() async =>
+  Future<Either<NetworkException, CryptoResponseModel>> getCrypto() async =>
       homeRemoteDataSource.getCrypto();
 }

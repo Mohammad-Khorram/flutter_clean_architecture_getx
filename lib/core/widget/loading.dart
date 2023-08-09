@@ -6,11 +6,9 @@ import 'package:get/get.dart';
 
 class LoadingWidget {
   Widget circular({double? size, Color? color}) {
-    return Obx(
-      () => SpinKitThreeBounce(
-        color: color ?? ColorConfig.color50,
-        size: size ?? SizeConfig.s22.r,
-      ),
+    return SpinKitThreeBounce(
+      color: color ?? ColorConfig.color50,
+      size: size ?? SizeConfig.s22.r,
     );
   }
 

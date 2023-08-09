@@ -6,7 +6,7 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart' as dio;
 
 abstract class HomeRemoteDataSource {
-  Future<Either<NetworkException, HomeResponseModel>> getCrypto();
+  Future<Either<NetworkException, CryptoResponseModel>> getCrypto();
 }
 
 class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
@@ -15,12 +15,12 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
   HomeRemoteDataSourceImpl(this._dioCore);
 
   @override
-  Future<Either<NetworkException, HomeResponseModel>> getCrypto() async {
+  Future<Either<NetworkException, CryptoResponseModel>> getCrypto() async {
     try {
       dio.Response<dynamic> response = await _dioCore.get(path: PathCore.home);
 
       if (response.statusCode == 200) {
-        return Right(HomeResponseModel.fromJson(response.data));
+        return Right(CryptoResponseModel.fromJson(response.data));
       }
 
       return Left(NetworkException.handleResponse(response));

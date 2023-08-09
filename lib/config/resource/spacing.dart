@@ -63,6 +63,7 @@ class SpacingConfig {
   static final EdgeInsets s10Vertical = EdgeInsets.symmetric(vertical: 10.r);
   static final EdgeInsets s12Vertical = EdgeInsets.symmetric(vertical: 12.r);
   static final EdgeInsets s16Vertical = EdgeInsets.symmetric(vertical: 16.r);
+  static final EdgeInsets s18Vertical = EdgeInsets.symmetric(vertical: 18.r);
   static final EdgeInsets s20Vertical = EdgeInsets.symmetric(vertical: 20.r);
   static final EdgeInsets s24Vertical = EdgeInsets.symmetric(vertical: 24.r);
   static final EdgeInsets s32Vertical = EdgeInsets.symmetric(vertical: 32.r);

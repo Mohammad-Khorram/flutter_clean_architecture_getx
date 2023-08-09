@@ -1,36 +1,36 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'home_response_model.freezed.dart';
+part 'crypto_response_model.freezed.dart';
 
-part 'home_response_model.g.dart';
+part 'crypto_response_model.g.dart';
 
 @freezed
-class HomeResponseModel with _$HomeResponseModel {
-  const factory HomeResponseModel({
-    required Data data,
-    required Status status,
-  }) = _HomeResponseModel;
+class CryptoResponseModel with _$CryptoResponseModel {
+  const factory CryptoResponseModel({
+    required DataModel data,
+    //required Status status,
+  }) = _CryptoResponseModel;
 
-  factory HomeResponseModel.fromJson(Map<String, dynamic> json) =>
-      _$HomeResponseModelFromJson(json);
+  factory CryptoResponseModel.fromJson(Map<String, dynamic> json) =>
+      _$CryptoResponseModelFromJson(json);
 }
 
 @freezed
-class Data with _$Data {
-  const factory Data({
-    required List<CryptoCurrencyList> cryptoCurrencyList,
+class DataModel with _$DataModel {
+  const factory DataModel({
+    required List<CryptoCurrencyItem> cryptoCurrencyList,
     required String totalCount,
-  }) = _Data;
+  }) = _DataModel;
 
-  factory Data.fromJson(Map<String, dynamic> json) => _$DataFromJson(json);
+  factory DataModel.fromJson(Map<String, dynamic> json) => _$DataModelFromJson(json);
 }
 
 @freezed
-class CryptoCurrencyList with _$CryptoCurrencyList {
-  const factory CryptoCurrencyList({
+class CryptoCurrencyItem with _$CryptoCurrencyItem {
+  const factory CryptoCurrencyItem({
     required int id,
     required String name,
-    required String symbol,
+    /*required String symbol,
     required String slug,
     required List<String> tags,
     required int cmcRank,
@@ -42,18 +42,18 @@ class CryptoCurrencyList with _$CryptoCurrencyList {
     required int isActive,
     required DateTime lastUpdated,
     required DateTime dateAdded,
-    required List<Quote> quotes,
+    required List<QuoteItem> quotes,
     required bool isAudited,
-    required List<dynamic> auditInfoList,
-  }) = _CryptoCurrencyList;
+    required List<dynamic> auditInfoList,*/
+  }) = _CryptoCurrencyItem;
 
-  factory CryptoCurrencyList.fromJson(Map<String, dynamic> json) =>
-      _$CryptoCurrencyListFromJson(json);
+  factory CryptoCurrencyItem.fromJson(Map<String, dynamic> json) =>
+      _$CryptoCurrencyItemFromJson(json);
 }
 
-@freezed
-class Quote with _$Quote {
-  const factory Quote({
+/*@freezed
+class QuoteItem with _$QuoteItem {
+  const factory QuoteItem({
     required String name,
     required double price,
     required double volume24H,
@@ -70,12 +70,12 @@ class Quote with _$Quote {
     required double dominance,
     required double turnover,
     required double ytdPriceChangePercentage,
-  }) = _Quote;
+  }) = _QuoteItem;
 
-  factory Quote.fromJson(Map<String, dynamic> json) => _$QuoteFromJson(json);
-}
+  factory QuoteItem.fromJson(Map<String, dynamic> json) => _$QuoteItemFromJson(json);
+}*/
 
-@freezed
+/*@freezed
 class Status with _$Status {
   const factory Status({
     required DateTime timestamp,
@@ -87,3 +87,4 @@ class Status with _$Status {
 
   factory Status.fromJson(Map<String, dynamic> json) => _$StatusFromJson(json);
 }
+*/

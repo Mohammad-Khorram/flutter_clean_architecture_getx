@@ -24,40 +24,39 @@ class UserItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      child: Column(
-        children: [
-          content(),
-          if (type == ItemDividerType.separator) ...[
-            SizedBox(height: SizeConfig.s09.r),
-            const SeparatorItem(),
-          ],
-          if (type == ItemDividerType.divider) divider(),
+    return Column(
+      children: [
+        content(),
+        if (type == ItemDividerType.separator) ...[
+          const SeparatorItem(),
         ],
-      ),
+        if (type == ItemDividerType.divider) divider(),
+      ],
     );
   }
 
   Widget content() {
-    return Padding(
-      padding: SpacingConfig.s16Vertical,
-      child: Row(
-        children: [
-          SizedBox(width: SizeConfig.s14.r),
-          iconView(),
-          SizedBox(width: SizeConfig.s18.r),
-          value == null
-              ? titleView()
-              : Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    titleView(),
-                    SizedBox(height: SizeConfig.s02.r),
-                    valueView(),
-                  ],
-                ),
-        ],
+    return InkWell(
+      onTap: onTap,
+      child: Padding(
+        padding: SpacingConfig.s18Vertical,
+        child: Row(
+          children: [
+            SizedBox(width: SizeConfig.s14.r),
+            iconView(),
+            SizedBox(width: SizeConfig.s18.r),
+            value == null
+                ? titleView()
+                : Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      titleView(),
+                      SizedBox(height: SizeConfig.s02.r),
+                      valueView(),
+                    ],
+                  ),
+          ],
+        ),
       ),
     );
   }
@@ -80,7 +79,7 @@ class UserItem extends StatelessWidget {
         left: 'direction'.tr == 'ltr' ? SizeConfig.s52.r : SizeConfig.zero,
         right: 'direction'.tr == 'ltr' ? SizeConfig.zero : SizeConfig.s52.r,
       ),
-      child: DividerWidget().horizontal(),
+      child: DividerWidget().horizontal(space: SizeConfig.zero),
     );
   }
 }

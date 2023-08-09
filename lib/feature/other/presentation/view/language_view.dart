@@ -26,7 +26,6 @@ class LanguageView extends BaseView<LanguageController> {
 
   Widget bodyView() {
     return DelayedWidget(
-      animationDuration: DurationConfig.widgetAnimation,
       child: ListView.builder(
         itemCount: controller.languageListModel.languageItemList.length,
         padding: SpacingConfig.s16All,

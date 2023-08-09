@@ -19,7 +19,7 @@ class LogCore {
     logger.e(message);
   }
 
-  static void wtf(dynamic message) {
+  static void fatal(dynamic message) {
     Logger logger = Logger();
     Logger.level = Level.fatal;
     logger.f(message);
