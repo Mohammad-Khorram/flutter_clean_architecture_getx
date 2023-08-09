@@ -51,10 +51,7 @@ class HomeController extends BaseController {
       (failure) {
         LogCore.fatal(failure.message);
       },
-      (result) {
-        cryptoResponseModel = result;
-        LogCore.info(cryptoResponseModel.toJson());
-      },
+      (result) => cryptoResponseModel = result,
     );
 
     setIsLoadingClause(false);

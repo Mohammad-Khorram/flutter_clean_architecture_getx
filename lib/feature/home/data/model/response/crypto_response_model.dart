@@ -7,8 +7,8 @@ part 'crypto_response_model.g.dart';
 @freezed
 class CryptoResponseModel with _$CryptoResponseModel {
   const factory CryptoResponseModel({
-    required DataModel data,
-    //required Status status,
+    DataModel? data,
+    StatusModel? status,
   }) = _CryptoResponseModel;
 
   factory CryptoResponseModel.fromJson(Map<String, dynamic> json) =>
@@ -18,73 +18,89 @@ class CryptoResponseModel with _$CryptoResponseModel {
 @freezed
 class DataModel with _$DataModel {
   const factory DataModel({
-    required List<CryptoCurrencyItem> cryptoCurrencyList,
-    required String totalCount,
+    List<CryptoCurrencyItem>? cryptoCurrencyList,
+    String? totalCount,
   }) = _DataModel;
 
-  factory DataModel.fromJson(Map<String, dynamic> json) => _$DataModelFromJson(json);
+  factory DataModel.fromJson(Map<String, dynamic> json) =>
+      _$DataModelFromJson(json);
 }
 
 @freezed
 class CryptoCurrencyItem with _$CryptoCurrencyItem {
   const factory CryptoCurrencyItem({
-    required int id,
-    required String name,
-    /*required String symbol,
-    required String slug,
-    required List<String> tags,
-    required int cmcRank,
-    required int marketPairCount,
-    required double circulatingSupply,
-    required int selfReportedCirculatingSupply,
-    required double totalSupply,
-    required int maxSupply,
-    required int isActive,
-    required DateTime lastUpdated,
-    required DateTime dateAdded,
-    required List<QuoteItem> quotes,
-    required bool isAudited,
-    required List<dynamic> auditInfoList,*/
+    int? id,
+    String? name,
+    String? symbol,
+    String? slug,
+    List<String>? tags,
+    int? cmcRank,
+    int? marketPairCount,
+    double? circulatingSupply,
+    int? selfReportedCirculatingSupply,
+    double? totalSupply,
+    double? maxSupply,
+    int? isActive,
+    DateTime? lastUpdated,
+    DateTime? dateAdded,
+    List<QuoteItem>? quotes,
+    bool? isAudited,
+    List<AuditInfoItem>? auditInfoList,
   }) = _CryptoCurrencyItem;
 
   factory CryptoCurrencyItem.fromJson(Map<String, dynamic> json) =>
       _$CryptoCurrencyItemFromJson(json);
 }
 
-/*@freezed
+@freezed
 class QuoteItem with _$QuoteItem {
   const factory QuoteItem({
-    required String name,
-    required double price,
-    required double volume24H,
-    required double marketCap,
-    required double percentChange1H,
-    required double percentChange24H,
-    required double percentChange7D,
-    required DateTime lastUpdated,
-    required double percentChange30D,
-    required double percentChange60D,
-    required double percentChange90D,
-    required double fullyDilluttedMarketCap,
-    required double marketCapByTotalSupply,
-    required double dominance,
-    required double turnover,
-    required double ytdPriceChangePercentage,
+    String? name,
+    double? price,
+    double? volume24h,
+    double? marketCap,
+    double? percentChange1h,
+    double? percentChange24h,
+    double? percentChange7d,
+    DateTime? lastUpdated,
+    double? percentChange30d,
+    double? percentChange60d,
+    double? percentChange90d,
+    double? fullyDilluttedMarketCap,
+    double? marketCapByTotalSupply,
+    double? dominance,
+    double? turnover,
+    double? ytdPriceChangePercentage,
   }) = _QuoteItem;
 
-  factory QuoteItem.fromJson(Map<String, dynamic> json) => _$QuoteItemFromJson(json);
-}*/
-
-/*@freezed
-class Status with _$Status {
-  const factory Status({
-    required DateTime timestamp,
-    required String errorCode,
-    required String errorMessage,
-    required String elapsed,
-    required int creditCount,
-  }) = _Status;
-
-  factory Status.fromJson(Map<String, dynamic> json) => _$StatusFromJson(json);
+  factory QuoteItem.fromJson(Map<String, dynamic> json) =>
+      _$QuoteItemFromJson(json);
 }
-*/
+
+@freezed
+class StatusModel with _$StatusModel {
+  const factory StatusModel({
+    DateTime? timestamp,
+    String? error_code,
+    String? error_message,
+    String? elapsed,
+    int? credit_count,
+  }) = _StatusModel;
+
+  factory StatusModel.fromJson(Map<String, dynamic> json) =>
+      _$StatusModelFromJson(json);
+}
+
+@freezed
+class AuditInfoItem with _$AuditInfoItem {
+  const factory AuditInfoItem({
+    String? coinId,
+    String? auditor,
+    int? auditStatus,
+    DateTime? auditTime,
+    String? reportUrl,
+  }) = _AuditInfoItem;
+
+  factory AuditInfoItem.fromJson(Map<String, dynamic> json) =>
+      _$AuditInfoItemFromJson(json);
+}

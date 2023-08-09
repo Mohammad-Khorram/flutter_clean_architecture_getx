@@ -57,10 +57,11 @@ class HomeView extends BaseView<HomeController> {
 
   Widget list() {
     return ListView.builder(
-      itemCount: controller.cryptoResponseModel.data.cryptoCurrencyList.length,
+      itemCount: controller.cryptoResponseModel.data!.cryptoCurrencyList!.length,
+      shrinkWrap: true,
       itemBuilder: (context, index) => CryptoItem(
           index: index,
-          model: controller.cryptoResponseModel.data.cryptoCurrencyList[index]),
+          model: controller.cryptoResponseModel.data!.cryptoCurrencyList![index]),
     );
   }
 }
