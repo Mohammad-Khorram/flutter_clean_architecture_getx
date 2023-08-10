@@ -101,7 +101,7 @@ class RegisterView extends BaseView<RegisterController> {
               onTap: controller.togglePasswordVisibility,
               borderRadius: RadiusConfig.r07All,
               child: Icon(
-                !controller.passwordVisibilityClause()
+                controller.passwordVisibilityClause()
                     ? Ionicons.eye_outline
                     : Ionicons.eye,
                 size: SizeConfig.s16.r,

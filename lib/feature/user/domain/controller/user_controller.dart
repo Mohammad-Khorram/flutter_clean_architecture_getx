@@ -5,8 +5,6 @@ import 'package:get/get.dart';
 class UserController extends BaseController {
   void navigateToRegister() => Get.toNamed(RouteConfig.register);
 
-  void navigateToProfile() => Get.toNamed(RouteConfig.profile);
-
   void navigateToLanguage() => Get.toNamed(RouteConfig.language);
 
   void navigateToAsk() => Get.toNamed(RouteConfig.ask);

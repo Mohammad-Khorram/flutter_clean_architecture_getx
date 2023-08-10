@@ -1,4 +1,5 @@
 import 'package:crypto_currency/config/boiler/binding_boiler.dart';
+import 'package:crypto_currency/config/boiler/util_boiler.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -6,7 +7,6 @@ import 'config/boiler/resource_boiler.dart';
 import 'config/boiler/view_boiler.dart';
 import 'config/routing/page.dart';
 import 'config/routing/route.dart';
-import 'core/util/lang.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

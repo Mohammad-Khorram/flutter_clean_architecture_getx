@@ -8,6 +8,7 @@ import 'package:crypto_currency/config/enumeration/enumeration.dart';
 import 'package:crypto_currency/core/network/network_exception.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart' as getx;
 import 'package:get/get.dart';
 
 class HomeController extends BaseController {
@@ -75,6 +76,8 @@ class HomeController extends BaseController {
         sortType: 'asc',
       ),
     ]);
+
+
   }
 
   /// handle pagination

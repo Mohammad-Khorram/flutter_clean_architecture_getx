@@ -2,8 +2,6 @@ import 'package:crypto_currency/config/boiler/base_boiler.dart';
 import 'package:crypto_currency/config/boiler/model_boiler.dart';
 import 'package:crypto_currency/config/boiler/repository_boiler.dart';
 import 'package:crypto_currency/config/boiler/util_boiler.dart';
-import 'package:crypto_currency/config/boiler/widget_boiler.dart';
-import 'package:crypto_currency/config/routing/route.dart';
 import 'package:crypto_currency/core/network/network_exception.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';

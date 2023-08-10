@@ -31,16 +31,6 @@ class LangCore extends Translations {
           // user
           'userTitle': 'User',
 
-          // login
-          'loginPrompt': 'Login to account',
-          'loginTitle': 'Login',
-          'loginUsername': 'Username',
-          'loginPassword': 'Password',
-          'loginForgetPass': 'Forget password?',
-          'loginAction': 'Submit',
-          'loginRegisterHint1': 'Don\'t have an account? ',
-          'loginRegisterHint2': 'Register',
-
           // register
           'registerPrompt': 'Create an account',
           'registerTitle': 'Register',
@@ -51,23 +41,9 @@ class LangCore extends Translations {
           'registerLoginHint1': 'Already have an account? ',
           'registerLoginHint2': 'Login',
 
-          // profile
-          'profileTitle': 'Profile',
-          'profileFullName': 'Full name',
-          'profileUserName': 'User name',
-          'profileEmail': 'Email',
-          'profilePhone': 'Phone',
-          'profileSignOut': 'Logout',
-
           // language
           'languageTitle': 'Language',
           'languageHelpTitle': 'Language',
-
-          // theme
-          'themeTitle': 'Theme',
-          'themeValueSystem': 'System',
-          'themeValueDark': 'Dark',
-          'themeValueLight': 'Light',
 
           // ask
           'askTitle': 'Ask a Question',
@@ -89,7 +65,7 @@ class LangCore extends Translations {
           // general
           'lang': 'fa',
           'direction': 'rtl',
-          'appName': 'فروشگاه',
+          'appName': 'ارز دیجیتال',
           'connectionError': 'اتصال اینترنت خود را بررسی و دوباره تلاش کنید.',
           'generalError': 'عملیات موردنظر با خطا همراه شد! لطفاً بعداً دوباره تلاش کنید.',
           'notFoundError': 'صفحه مورد نظر شما پیدا نشد!',
@@ -104,33 +80,27 @@ class LangCore extends Translations {
           'parsingDataError': 'با عرض پوزش، در تجزیه داده\u200cها خطایی رخ داده است. لطفاً بعداً دوباره امتحان کنید.\nاگر هم\u200cچنان این خطا را مشاهده می‌کنید، لطفاً برای کمک با تیم پشتیبانی ما تماس بگیرید.',
           'errorAction': 'تلاش مجدد',
 
-          // login
-          'loginPrompt': 'ورود به حساب کاربری',
-          'loginTitle': 'ورود',
-          'loginUsername': 'نام کاربری',
-          'loginPassword': 'رمز عبور',
-          'forgetPass': 'رمز عبور خود را فراموش کرده\u200cاید؟',
-          'loginAction': 'ورود',
-          'loginRegisterHint1': 'حساب کاربری ندارید؟ ',
-          'loginRegisterHint2': 'ثبت\u200cنام',
+          // home
+          'homeFilterTopMarketCap': 'ارزهای برتر',
+          'homeFilterTopGainers': 'بیشترین سود',
+          'homeFilterTopLosers': 'بیشترین ضرر',
 
-          // profile
-          'profileTitle': 'حساب کاربری',
-          'profileFullName': 'نام و نام خانوادگی',
-          'profileUserName': 'نام کاربری',
-          'profileEmail': 'ایمیل',
-          'profilePhone': 'شماره تماس',
-          'profileSignOut': 'خروج از حساب کاربری',
+          // user
+          'userTitle': 'ناحیه کاربری',
+
+          // register
+          'registerPrompt': 'ایجاد حساب کاربری',
+          'registerTitle': 'ثبت نام',
+          'registerName': 'نام و نام خانوادگی',
+          'registerEmail': 'ایمیل',
+          'registerPassword': 'رمز ورود',
+          'registerAction': 'ثبت نام',
+          'registerLoginHint1': 'حساب کاربری دارید؟ ',
+          'registerLoginHint2': 'ورود',
 
           // language
           'languageTitle': 'زبان',
           'languageHelpTitle': 'زبان (Language)',
-
-          // theme
-          'themeTitle': 'حالت نمایش',
-          'themeValueSystem': 'بر اساس سیستم',
-          'themeValueDark': 'تیره',
-          'themeValueLight': 'روشن',
 
           // ask
           'askTitle': 'سوال بپرسید',
@@ -167,33 +137,27 @@ class LangCore extends Translations {
           'parsingDataError': 'آسف، حدث خطأ في تحليل البيانات. يرجى المحاولة مرة أخرى لاحقًا.\nإذا استمر ظهور هذا الخطأ، فيرجى الاتصال بفريق الدعم للحصول على المساعدة.',
           'errorAction': 'حاول ثانية',
 
-          // login
-          'loginPrompt': 'تسجيل الدخول إلى الحساب',
-          'loginTitle': 'تسجيل الدخول',
-          'loginUsername': 'اسم المستخدم',
-          'loginPassword': 'كلمة المرور',
-          'forgetPass': 'نسيت كلمة المرور؟',
-          'loginAction': 'يُقدِّم',
-          'loginRegisterHint1': 'ليس لديك حساب؟ ',
-          'loginRegisterHint2': 'يسجل',
+          // home
+          'homeFilterTopMarketCap': 'أعلى سقف لسعر السوق',
+          'homeFilterTopGainers': 'كبار الرابحين',
+          'homeFilterTopLosers': 'أكبر الخاسرين',
 
-          // profile
-          'profileTitle': 'حساب تعريفي',
-          'profileFullName': 'الاسم الكامل',
-          'profileUserName': 'اسم المستخدم',
-          'profileEmail': 'بريد إلكتروني',
-          'profilePhone': 'هاتف',
-          'profileSignOut': 'تسجيل خروج',
+          // user
+          'userTitle': 'مستخدم',
+
+          // register
+          'registerPrompt': 'إنشاء حساب',
+          'registerTitle': 'يسجل',
+          'registerName': 'اسم',
+          'registerEmail': 'بريد إلكتروني',
+          'registerPassword': 'كلمة المرور',
+          'registerAction': 'يُقدِّم',
+          'registerLoginHint1': 'هل لديك حساب؟ ',
+          'registerLoginHint2': 'تسجيل الدخول',
 
           // language
           'languageTitle': 'لغة',
           'languageHelpTitle': 'لغة (Language)',
-
-          // theme
-          'themeTitle': 'سمة',
-          'themeValueSystem': 'نظام',
-          'themeValueDark': 'مظلم',
-          'themeValueLight': 'ضوء',
 
           // ask
           'askTitle': 'طرح سؤال',
@@ -230,33 +194,27 @@ class LangCore extends Translations {
           'parsingDataError': 'Lo sentimos, hubo un error al analizar los datos. Vuelva a intentarlo más tarde.\nSi continúa viendo este error, comuníquese con nuestro equipo de soporte para obtener ayuda.',
           'errorAction': 'TIntentar otra vez',
 
-          // login
-          'loginPrompt': 'Iniciar sesión en la cuenta',
-          'loginTitle': 'Acceso',
-          'loginUsername': 'Nombre de usuario',
-          'loginPassword': 'Contraseña',
-          'forgetPass': 'Contraseña olvidada?',
-          'loginAction': 'Entregar',
-          'loginRegisterHint1': 'No tienes una cuenta? ',
-          'loginRegisterHint2': 'Registro',
+          // home
+          'homeFilterTopMarketCap': 'Capitalización de mercado superior',
+          'homeFilterTopGainers': 'Mejores ganadores',
+          'homeFilterTopLosers': 'grandes perdedores',
 
-          // profile
-          'profileTitle': 'Perfil',
-          'profileFullName': 'Nombre completo',
-          'profileUserName': 'Nombre de usuario',
-          'profileEmail': 'Correo electrónico',
-          'profilePhone': 'Teléfono',
-          'profileSignOut': 'Cerrar sesión',
+          // user
+          'userTitle': 'Usuario',
+
+          // register
+          'registerPrompt': 'Crea una cuenta',
+          'registerTitle': 'Registro',
+          'registerName': 'Nombre',
+          'registerEmail': 'Correo electrónico',
+          'registerPassword': 'Contraseña',
+          'registerAction': 'Entregar',
+          'registerLoginHint1': 'Ya tienes una cuenta? ',
+          'registerLoginHint2': 'acceso',
 
           // language
           'languageTitle': 'Idioma',
           'languageHelpTitle': 'Idioma (Language)',
-
-          // theme
-          'themeTitle': 'Tema',
-          'themeValueSystem': 'Sistema',
-          'themeValueDark': 'Oscuro',
-          'themeValueLight': 'Ligero',
 
           // ask
           'askTitle': 'Hacer una pregunta',
@@ -293,33 +251,27 @@ class LangCore extends Translations {
           'parsingDataError': 'Désolé, une erreur s\'est produite lors de l\'analyse des données. Veuillez réessayer plus tard.\nSi vous continuez à voir cette erreur, veuillez contacter notre équipe d\'assistance pour obtenir de l\'aide.',
           'errorAction': 'Essayer à nouveau',
 
-          // login
-          'loginPrompt': 'Connectez-vous au compte',
-          'loginTitle': 'Connexion',
-          'loginUsername': 'Nom d\'utilisateur',
-          'loginPassword': 'Mot de passe',
-          'forgetPass': 'Mot de passe oublié?',
-          'loginAction': 'Soumettre',
-          'loginRegisterHint1': 'Vous n\'avez pas de compte? ',
-          'loginRegisterHint2': 'Enregistrer',
+          // home
+          'homeFilterTopMarketCap': 'Top capitalisations boursières',
+          'homeFilterTopGainers': 'Meilleurs gagnants',
+          'homeFilterTopLosers': 'Principaux perdants',
 
-          // profile
-          'profileTitle': 'Profil',
-          'profileFullName': 'Nom et prénom',
-          'profileUserName': 'Nom d\'utilisateur',
-          'profileEmail': 'E-mail',
-          'profilePhone': 'Téléphone',
-          'profileSignOut': 'Se déconnecter',
+          // user
+          'userTitle': 'Utilisateur',
+
+          // register
+          'registerPrompt': 'Créer un compte',
+          'registerTitle': 'Register',
+          'registerName': 'Nom',
+          'registerEmail': 'E-mail',
+          'registerPassword': 'Mot de passe',
+          'registerAction': 'Soumettre',
+          'registerLoginHint1': 'Vous avez déjà un compte? ',
+          'registerLoginHint2': 'Se connecter',
 
           // language
           'languageTitle': 'Langue',
           'languageHelpTitle': 'Langue (Language)',
-
-          // theme
-          'themeTitle': 'Thème',
-          'themeValueSystem': 'Système',
-          'themeValueDark': 'Sombre',
-          'themeValueLight': 'Lumière',
 
           // ask
           'askTitle': 'Poser une question',
@@ -356,33 +308,27 @@ class LangCore extends Translations {
           'parsingDataError': '抱歉，解析数据时出错。 请稍后重试。\n如果您仍然看到此错误，请联系我们的支持团队寻求帮助。',
           'errorAction': '再试一次',
 
-          // login
-          'loginPrompt': '登录帐户',
-          'loginTitle': '登录',
-          'loginUsername': '用户名',
-          'loginPassword': '密码',
-          'forgetPass': '忘记密码？',
-          'loginAction': '提交',
-          'loginRegisterHint1': '没有帐户？ ',
-          'loginRegisterHint2': '登记',
+          // home
+          'homeFilterTopMarketCap': '最高市值',
+          'homeFilterTopGainers': '涨幅居前者',
+          'homeFilterTopLosers': '最大输家',
 
-          // profile
-          'profileTitle': '轮廓',
-          'profileFullName': '全名',
-          'profileUserName': '用户名',
-          'profileEmail': '电子邮件',
-          'profilePhone': '电话',
-          'profileSignOut': '登出',
+          // user
+          'userTitle': '用户',
+
+          // register
+          'registerPrompt': '创建一个帐户',
+          'registerTitle': '登记',
+          'registerName': '姓名',
+          'registerEmail': '电子邮件',
+          'registerPassword': '密码',
+          'registerAction': '提交',
+          'registerLoginHint1': '已经有帐户？ ',
+          'registerLoginHint2': '登录',
 
           // language
           'languageTitle': '语言',
           'languageHelpTitle': '语言 (Language)',
-
-          // theme
-          'themeTitle': '主题',
-          'themeValueSystem': '系统',
-          'themeValueDark': '黑暗的',
-          'themeValueLight': '光',
 
           // ask
           'askTitle': '问一个问题',
@@ -419,33 +365,27 @@ class LangCore extends Translations {
           'parsingDataError': 'क्षमा करें, डेटा पार्स करने में त्रुटि हुई। कृपया बाद में पुनः प्रयास करें।\nयदि आपको यह त्रुटि दिखाई देती रहती है, तो कृपया सहायता के लिए हमारी सहायता टीम से संपर्क करें।',
           'errorAction': 'पुनः प्रयास करें',
 
-          // login
-          'loginPrompt': 'खाते में लॉगिन करें',
-          'loginTitle': '',
-          'loginUsername': 'उपयोगकर्ता नाम',
-          'loginPassword': '',
-          'forgetPass': 'पासवर्ड भूल गए?',
-          'loginAction': 'जमा करना',
-          'loginRegisterHint1': 'क्या आपके पास खाता नहीं है? ',
-          'loginRegisterHint2': 'पंजीकरण करवाना',
+          // home
+          'homeFilterTopMarketCap': 'शीर्ष मार्केट कैप',
+          'homeFilterTopGainers': 'शीर्ष लाभ पाने वाले',
+          'homeFilterTopLosers': 'शीर्ष हारने वाले',
 
-          // profile
-          'profileTitle': 'प्रोफ़ाइल',
-          'profileFullName': 'पूरा नाम',
-          'profileUserName': 'उपयोगकर्ता नाम',
-          'profileEmail': 'ईमेल',
-          'profilePhone': 'फ़ोन',
-          'profileSignOut': 'लॉग आउट',
+          // user
+          'userTitle': 'उपयोगकर्ता',
+
+          // register
+          'registerPrompt': 'खाता बनाएं',
+          'registerTitle': 'पंजीकरण करवाना',
+          'registerName': 'नाम',
+          'registerEmail': 'ईमेल',
+          'registerPassword': 'पासवर्ड',
+          'registerAction': 'जमा करना',
+          'registerLoginHint1': 'क्या आपके पास पहले से एक खाता मौजूद है? ',
+          'registerLoginHint2': 'लॉग इन करें',
 
           // language
           'languageTitle': 'भाषा',
           'languageHelpTitle': 'भाषा (Language)',
-
-          // theme
-          'themeTitle': 'थीम',
-          'themeValueSystem': 'प्रणाली',
-          'themeValueDark': 'अँधेरा',
-          'themeValueLight': 'रोशनी',
 
           // ask
           'askTitle': 'प्रश्न पूछें',

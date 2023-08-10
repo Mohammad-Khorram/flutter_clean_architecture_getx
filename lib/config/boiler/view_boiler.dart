@@ -7,3 +7,4 @@ export 'package:crypto_currency/feature/other/presentation/view/not_found_view.d
 export 'package:crypto_currency/feature/user/presentation/view/login_view.dart';
 export 'package:crypto_currency/feature/home/presentation/view/home_view.dart';
 export 'package:crypto_currency/feature/user/presentation/view/user_view.dart';
+export 'package:crypto_currency/feature/user/presentation/view/register_view.dart';
