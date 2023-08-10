@@ -14,6 +14,7 @@ class AppBarWidget {
     Color? backgroundColor,
     double? elevation,
     double? leadingWidth,
+    PreferredSizeWidget? bottom,
   }) {
     return AppBar(
       elevation: elevation,
@@ -29,6 +30,7 @@ class AppBarWidget {
       leadingWidth: leadingWidth,
       automaticallyImplyLeading: false,
       actions: actions,
+      bottom: bottom,
     );
   }
 

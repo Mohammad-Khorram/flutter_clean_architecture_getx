@@ -13,6 +13,8 @@ class RadiusConfig {
   static final BorderRadius r12All = BorderRadius.circular(SizeConfig.s12.r);
   static final BorderRadius r14All = BorderRadius.circular(SizeConfig.s14.r);
   static final BorderRadius r16All = BorderRadius.circular(SizeConfig.s16.r);
+  static final BorderRadius r20All = BorderRadius.circular(SizeConfig.s20.r);
+  static final BorderRadius r24All = BorderRadius.circular(SizeConfig.s24.r);
   static final BorderRadius r32All = BorderRadius.circular(SizeConfig.s32.r);
   // end all
 

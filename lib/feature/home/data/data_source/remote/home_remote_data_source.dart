@@ -1,8 +1,8 @@
 import 'package:crypto_currency/config/boiler/model_boiler.dart';
+import 'package:crypto_currency/config/boiler/util_boiler.dart';
 import 'package:crypto_currency/core/network/dio.dart';
 import 'package:crypto_currency/core/network/network_exception.dart';
 import 'package:crypto_currency/core/network/path.dart';
-import 'package:crypto_currency/feature/home/data/model/request/crypto_request_model.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart' as dio;
 

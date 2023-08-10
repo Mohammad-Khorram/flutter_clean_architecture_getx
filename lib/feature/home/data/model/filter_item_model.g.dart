@@ -1,25 +1,23 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'crypto_request_model.dart';
+part of 'filter_item_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CryptoRequestModel _$$_CryptoRequestModelFromJson(
-        Map<String, dynamic> json) =>
-    _$_CryptoRequestModel(
+_$_FilterItemModel _$$_FilterItemModelFromJson(Map<String, dynamic> json) =>
+    _$_FilterItemModel(
+      title: json['title'] as String,
       sortBy: json['sortBy'] as String,
       sortType: json['sortType'] as String,
-      start: json['start'] as int,
-      limit: json['limit'] as int,
+      selected: json['selected'] as bool? ?? false,
     );
 
-Map<String, dynamic> _$$_CryptoRequestModelToJson(
-        _$_CryptoRequestModel instance) =>
+Map<String, dynamic> _$$_FilterItemModelToJson(_$_FilterItemModel instance) =>
     <String, dynamic>{
+      'title': instance.title,
       'sortBy': instance.sortBy,
       'sortType': instance.sortType,
-      'start': instance.start,
-      'limit': instance.limit,
+      'selected': instance.selected,
     };

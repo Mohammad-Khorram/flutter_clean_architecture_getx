@@ -117,7 +117,7 @@ class CryptoItem extends StatelessWidget {
         DecimalCore().percentChangesIcon(percent24),
         SizedBox(width: SizeConfig.s03.r),
         Text(
-          DecimalCore().removeDecimalPercent(percent24),
+          '${DecimalCore().removeDecimalPercent(percent24)}%',
           style: TextStyle(
             fontSize: SizeConfig.s10.sp,
             color: DecimalCore().percentChangesColor(percent24),

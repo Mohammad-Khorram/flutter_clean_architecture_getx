@@ -20,6 +20,8 @@ CryptoRequestModel _$CryptoRequestModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CryptoRequestModel {
+  String get sortBy => throw _privateConstructorUsedError;
+  String get sortType => throw _privateConstructorUsedError;
   int get start => throw _privateConstructorUsedError;
   int get limit => throw _privateConstructorUsedError;
 
@@ -35,7 +37,7 @@ abstract class $CryptoRequestModelCopyWith<$Res> {
           CryptoRequestModel value, $Res Function(CryptoRequestModel) then) =
       _$CryptoRequestModelCopyWithImpl<$Res, CryptoRequestModel>;
   @useResult
-  $Res call({int start, int limit});
+  $Res call({String sortBy, String sortType, int start, int limit});
 }
 
 /// @nodoc
@@ -51,10 +53,20 @@ class _$CryptoRequestModelCopyWithImpl<$Res, $Val extends CryptoRequestModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? sortBy = null,
+    Object? sortType = null,
     Object? start = null,
     Object? limit = null,
   }) {
     return _then(_value.copyWith(
+      sortBy: null == sortBy
+          ? _value.sortBy
+          : sortBy // ignore: cast_nullable_to_non_nullable
+              as String,
+      sortType: null == sortType
+          ? _value.sortType
+          : sortType // ignore: cast_nullable_to_non_nullable
+              as String,
       start: null == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
@@ -75,7 +87,7 @@ abstract class _$$_CryptoRequestModelCopyWith<$Res>
       __$$_CryptoRequestModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int start, int limit});
+  $Res call({String sortBy, String sortType, int start, int limit});
 }
 
 /// @nodoc
@@ -89,10 +101,20 @@ class __$$_CryptoRequestModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? sortBy = null,
+    Object? sortType = null,
     Object? start = null,
     Object? limit = null,
   }) {
     return _then(_$_CryptoRequestModel(
+      sortBy: null == sortBy
+          ? _value.sortBy
+          : sortBy // ignore: cast_nullable_to_non_nullable
+              as String,
+      sortType: null == sortType
+          ? _value.sortType
+          : sortType // ignore: cast_nullable_to_non_nullable
+              as String,
       start: null == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
@@ -108,11 +130,19 @@ class __$$_CryptoRequestModelCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CryptoRequestModel implements _CryptoRequestModel {
-  const _$_CryptoRequestModel({required this.start, required this.limit});
+  const _$_CryptoRequestModel(
+      {required this.sortBy,
+      required this.sortType,
+      required this.start,
+      required this.limit});
 
   factory _$_CryptoRequestModel.fromJson(Map<String, dynamic> json) =>
       _$$_CryptoRequestModelFromJson(json);
 
+  @override
+  final String sortBy;
+  @override
+  final String sortType;
   @override
   final int start;
   @override
@@ -120,7 +150,7 @@ class _$_CryptoRequestModel implements _CryptoRequestModel {
 
   @override
   String toString() {
-    return 'CryptoRequestModel(start: $start, limit: $limit)';
+    return 'CryptoRequestModel(sortBy: $sortBy, sortType: $sortType, start: $start, limit: $limit)';
   }
 
   @override
@@ -128,13 +158,16 @@ class _$_CryptoRequestModel implements _CryptoRequestModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CryptoRequestModel &&
+            (identical(other.sortBy, sortBy) || other.sortBy == sortBy) &&
+            (identical(other.sortType, sortType) ||
+                other.sortType == sortType) &&
             (identical(other.start, start) || other.start == start) &&
             (identical(other.limit, limit) || other.limit == limit));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, start, limit);
+  int get hashCode => Object.hash(runtimeType, sortBy, sortType, start, limit);
 
   @JsonKey(ignore: true)
   @override
@@ -153,12 +186,18 @@ class _$_CryptoRequestModel implements _CryptoRequestModel {
 
 abstract class _CryptoRequestModel implements CryptoRequestModel {
   const factory _CryptoRequestModel(
-      {required final int start,
+      {required final String sortBy,
+      required final String sortType,
+      required final int start,
       required final int limit}) = _$_CryptoRequestModel;
 
   factory _CryptoRequestModel.fromJson(Map<String, dynamic> json) =
       _$_CryptoRequestModel.fromJson;
 
+  @override
+  String get sortBy;
+  @override
+  String get sortType;
   @override
   int get start;
   @override

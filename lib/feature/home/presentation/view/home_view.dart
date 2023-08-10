@@ -5,6 +5,7 @@ import 'package:crypto_currency/config/boiler/util_boiler.dart';
 import 'package:crypto_currency/config/boiler/widget_boiler.dart';
 import 'package:crypto_currency/config/routing/route.dart';
 import 'package:crypto_currency/feature/home/presentation/widget/crypto_item.dart';
+import 'package:crypto_currency/feature/home/presentation/widget/filter_item.dart';
 import 'package:delayed_widget/delayed_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -35,6 +36,7 @@ class HomeView extends BaseView<HomeController> {
                 action: () => Get.toNamed(RouteConfig.user),
               ),
             ],
+            bottom: filter(),
           );
   }
 
@@ -50,11 +52,11 @@ class HomeView extends BaseView<HomeController> {
                 ? ShowErrorCore.connectionErrorView(onTap: controller.getCrypto)
                 : DelayedWidget(
                     child: SingleChildScrollView(
+                      physics: const BouncingScrollPhysics(),
                       controller: controller.scrollController,
                       child: Column(
                         children: [
-                          filter(),
-                          SizedBox(height: SizeConfig.s08.r),
+                          SizedBox(height: SizeConfig.s24.r),
                           list(),
                           paginateLoading(),
                         ],
@@ -63,8 +65,23 @@ class HomeView extends BaseView<HomeController> {
                   );
   }
 
-  Widget filter() {
-    return Container();
+  PreferredSizeWidget filter() {
+    return PreferredSize(
+      preferredSize: Size(double.maxFinite, SizeConfig.s42.r),
+      child: SizedBox(
+        height: SizeConfig.s42.r,
+        child: ListView.builder(
+          itemCount: controller.filterListModel.length,
+          scrollDirection: Axis.horizontal,
+          physics: const BouncingScrollPhysics(),
+          padding: SpacingConfig.s04h08v,
+          itemBuilder: (context, index) => FilterItem(
+            model: controller.filterListModel[index],
+            onTap: ()=>controller.filterSelection(index),
+          ),
+        ),
+      ),
+    );
   }
 
   Widget list() {
@@ -81,7 +98,7 @@ class HomeView extends BaseView<HomeController> {
     return Visibility(
       visible: controller.paginateLoadingClause(),
       child: Padding(
-        padding: const EdgeInsets.only(top: 12, bottom: 24),
+        padding: SpacingConfig.s06t24b,
         child: LoadingWidget().paginate(),
       ),
     );

@@ -79,6 +79,7 @@ class SpacingConfig {
   // end vertical
 
   // symmetric
+  static final EdgeInsets s04h08v = EdgeInsets.symmetric(horizontal: 4.r, vertical: 8.r);
   static final EdgeInsets s20h08v = EdgeInsets.symmetric(horizontal: 20.r, vertical: 8.r);
   static final EdgeInsets s16h14v = EdgeInsets.symmetric(horizontal: 16.r, vertical: 14.r);
   static final EdgeInsets s16h20v = EdgeInsets.symmetric(horizontal: 16.r, vertical: 20.r);
@@ -90,6 +91,6 @@ class SpacingConfig {
   // end fromLTRB
 
   // only
-
+  static final EdgeInsets s06t24b = EdgeInsets.only(top: 6.r, bottom: 24.r);
   // end only
 }

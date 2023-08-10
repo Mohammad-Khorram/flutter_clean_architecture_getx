@@ -17,6 +17,8 @@ class HomeController extends BaseController {
 
   // data_models
   List<CryptoCurrencyItem> cryptoCurrencyList = [];
+  RxList<FilterItemModel> filterListModel = RxList<FilterItemModel>();
+  CryptoRequestModel? cryptoRequestModel;
 
   // pagination
   ScrollController scrollController = ScrollController();
@@ -35,6 +37,7 @@ class HomeController extends BaseController {
   @override
   void onInit() {
     initLanguage();
+    initFilterData();
     initPagination();
     getCrypto();
     super.onInit();
@@ -53,6 +56,27 @@ class HomeController extends BaseController {
         .changeLanguage(title: langTitle, value: langValue);
   }
 
+  void initFilterData() {
+    filterListModel.addAll([
+      FilterItemModel(
+        title: 'Top Market Caps'.tr,
+        sortBy: 'market_cap',
+        sortType: 'desc',
+        selected: true,
+      ),
+      FilterItemModel(
+        title: 'Top Gainers'.tr,
+        sortBy: 'percent_change_24h',
+        sortType: 'desc',
+      ),
+      FilterItemModel(
+        title: 'Top Losers'.tr,
+        sortBy: 'percent_change_24h',
+        sortType: 'asc',
+      ),
+    ]);
+  }
+
   void initPagination() {
     scrollController.addListener(
       () async {
@@ -67,7 +91,9 @@ class HomeController extends BaseController {
   }
 
   /// get crypto list from api
-  Future<void> getCrypto({PaginationType type = PaginationType.first}) async {
+  Future<void> getCrypto(
+      {PaginationType type = PaginationType.first,
+      CryptoRequestModel? requestModel}) async {
     try {
       setConnectionErrorClause(false);
       setExceptionErrorClause(false);
@@ -77,18 +103,27 @@ class HomeController extends BaseController {
         return;
       }
 
-      type == PaginationType.first
-          ? setLoadingClause(true)
-          : setPaginateLoadingClause(true);
+      if (type == PaginationType.first) {
+        setLoadingClause(true);
+        if (cryptoCurrencyList.isNotEmpty) {
+          cryptoCurrencyList.clear();
+          cryptoCurrencyList = [];
+        }
+      } else {
+        setPaginateLoadingClause(true);
+      }
 
-      CryptoRequestModel cryptoRequestModel = CryptoRequestModel(
-          start: cryptoItemsPaginationPage *
-                  ConstantCore.cryptoItemsPaginationLimit +
-              1,
-          limit: ConstantCore.cryptoItemsPaginationLimit);
+      cryptoRequestModel = requestModel ??
+          CryptoRequestModel(
+              sortBy: 'market_cap',
+              sortType: 'desc',
+              start: cryptoItemsPaginationPage *
+                      ConstantCore.cryptoItemsPaginationLimit +
+                  1,
+              limit: ConstantCore.cryptoItemsPaginationLimit);
 
       Either<NetworkException, CryptoResponseModel> response =
-          await _repo.getCrypto(cryptoRequestModel: cryptoRequestModel);
+          await _repo.getCrypto(cryptoRequestModel: cryptoRequestModel!);
 
       response.fold(
         (failure) {
@@ -108,6 +143,20 @@ class HomeController extends BaseController {
           ? setLoadingClause(false)
           : setPaginateLoadingClause(false);
     }
+  }
+
+  void filterSelection(int index) {
+    int prevIndex =
+        filterListModel.indexWhere((element) => element.selected == true);
+    filterListModel[prevIndex] =
+        filterListModel[prevIndex].copyWith(selected: false);
+    filterListModel[index] = filterListModel[index].copyWith(selected: true);
+    CryptoRequestModel cryptoRequestModel = CryptoRequestModel(
+        sortBy: filterListModel[index].sortBy,
+        sortType: filterListModel[index].sortType,
+        start: 1,
+        limit: ConstantCore.cryptoItemsPaginationLimit);
+    getCrypto(type: PaginationType.first, requestModel: cryptoRequestModel);
   }
 
   /// handle internet connection status
