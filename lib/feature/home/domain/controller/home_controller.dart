@@ -18,7 +18,6 @@ class HomeController extends BaseController {
   // data_models
   List<CryptoCurrencyItem> cryptoCurrencyList = [];
   RxList<FilterItemModel> filterListModel = RxList<FilterItemModel>();
-  CryptoRequestModel? cryptoRequestModel;
 
   // pagination
   ScrollController scrollController = ScrollController();
@@ -56,6 +55,7 @@ class HomeController extends BaseController {
         .changeLanguage(title: langTitle, value: langValue);
   }
 
+  /// create local filter items
   void initFilterData() {
     filterListModel.addAll([
       FilterItemModel(
@@ -77,6 +77,7 @@ class HomeController extends BaseController {
     ]);
   }
 
+  /// handle pagination
   void initPagination() {
     scrollController.addListener(
       () async {
@@ -103,6 +104,7 @@ class HomeController extends BaseController {
         return;
       }
 
+      /// detect first_fetch or pagination_action
       if (type == PaginationType.first) {
         setLoadingClause(true);
         if (cryptoCurrencyList.isNotEmpty) {
@@ -113,7 +115,8 @@ class HomeController extends BaseController {
         setPaginateLoadingClause(true);
       }
 
-      cryptoRequestModel = requestModel ??
+      /// detect request data has data? (for filter and sort)
+      CryptoRequestModel cryptoRequestModel = requestModel ??
           CryptoRequestModel(
               sortBy: 'market_cap',
               sortType: 'desc',
@@ -123,10 +126,11 @@ class HomeController extends BaseController {
               limit: ConstantCore.cryptoItemsPaginationLimit);
 
       Either<NetworkException, CryptoResponseModel> response =
-          await _repo.getCrypto(cryptoRequestModel: cryptoRequestModel!);
+          await _repo.getCrypto(cryptoRequestModel: cryptoRequestModel);
 
       response.fold(
         (failure) {
+          /// handle exception for show to the end user
           errorMessage = failure.message;
           setExceptionErrorClause(true);
         },
@@ -136,6 +140,7 @@ class HomeController extends BaseController {
         },
       );
     } on NetworkException catch (ex) {
+      /// handle exception for show to the end user
       errorMessage = ex.message;
       setExceptionErrorClause(true);
     } finally {
@@ -145,18 +150,27 @@ class HomeController extends BaseController {
     }
   }
 
+  /// handle filter selection
   void filterSelection(int index) {
+    /// handle selection view to the end user
     int prevIndex =
         filterListModel.indexWhere((element) => element.selected == true);
+
+    if (prevIndex == index) {
+      return;
+    }
+
     filterListModel[prevIndex] =
         filterListModel[prevIndex].copyWith(selected: false);
     filterListModel[index] = filterListModel[index].copyWith(selected: true);
-    CryptoRequestModel cryptoRequestModel = CryptoRequestModel(
+
+    /// create request_model, then request to the api
+    CryptoRequestModel requestModel = CryptoRequestModel(
         sortBy: filterListModel[index].sortBy,
         sortType: filterListModel[index].sortType,
         start: 1,
         limit: ConstantCore.cryptoItemsPaginationLimit);
-    getCrypto(type: PaginationType.first, requestModel: cryptoRequestModel);
+    getCrypto(requestModel: requestModel);
   }
 
   /// handle internet connection status

@@ -40,6 +40,25 @@ class HomeView extends BaseView<HomeController> {
           );
   }
 
+  PreferredSizeWidget filter() {
+    return PreferredSize(
+      preferredSize: Size(double.maxFinite, SizeConfig.s42.r),
+      child: SizedBox(
+        height: SizeConfig.s42.r,
+        child: ListView.builder(
+          itemCount: controller.filterListModel.length,
+          scrollDirection: Axis.horizontal,
+          physics: const BouncingScrollPhysics(),
+          padding: SpacingConfig.s04h08v,
+          itemBuilder: (context, index) => FilterItem(
+            model: controller.filterListModel[index],
+            onTap: () => controller.filterSelection(index),
+          ),
+        ),
+      ),
+    );
+  }
+
   Widget bodyView() {
     return controller.loadingClause()
         ? loading()
@@ -65,32 +84,13 @@ class HomeView extends BaseView<HomeController> {
                   );
   }
 
-  PreferredSizeWidget filter() {
-    return PreferredSize(
-      preferredSize: Size(double.maxFinite, SizeConfig.s42.r),
-      child: SizedBox(
-        height: SizeConfig.s42.r,
-        child: ListView.builder(
-          itemCount: controller.filterListModel.length,
-          scrollDirection: Axis.horizontal,
-          physics: const BouncingScrollPhysics(),
-          padding: SpacingConfig.s04h08v,
-          itemBuilder: (context, index) => FilterItem(
-            model: controller.filterListModel[index],
-            onTap: ()=>controller.filterSelection(index),
-          ),
-        ),
-      ),
-    );
-  }
-
   Widget list() {
     return ListView.builder(
       itemCount: controller.cryptoCurrencyList.length,
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) =>
-          CryptoItem(model: controller.cryptoCurrencyList[index]),
+          CryptoItem(index: index,model: controller.cryptoCurrencyList[index]),
     );
   }
 

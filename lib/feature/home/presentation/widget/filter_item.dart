@@ -18,11 +18,11 @@ class FilterItem extends StatelessWidget {
         border: Border.all(color: ColorConfig.dark, width: SizeConfig.s01.r),
         borderRadius: RadiusConfig.r24All,
       ),
-      child: title(),
+      child: content(),
     );
   }
 
-  Widget title() {
+  Widget content() {
     return InkWell(
       onTap: onTap,
       borderRadius: RadiusConfig.r24All,

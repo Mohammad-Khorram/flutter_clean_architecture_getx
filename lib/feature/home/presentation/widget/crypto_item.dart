@@ -9,9 +9,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class CryptoItem extends StatelessWidget {
+  final int index;
   final CryptoCurrencyItem model;
 
-  const CryptoItem({super.key, required this.model});
+  const CryptoItem({super.key, required this.index, required this.model});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class CryptoItem extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  index(),
+                  indexView(),
                   SizedBox(width: SizeConfig.s20.r),
                   image(),
                   SizedBox(width: SizeConfig.s12.r),
@@ -58,9 +59,9 @@ class CryptoItem extends StatelessWidget {
     );
   }
 
-  Widget index() {
+  Widget indexView() {
     return Text(
-      '#${model.cmcRank!}',
+      '#${index + 1}',
       style: TextStyle(
         fontSize: SizeConfig.s11.sp,
         color: ColorConfig.color175,
