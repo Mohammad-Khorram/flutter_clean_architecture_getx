@@ -10,7 +10,7 @@ This is a sample Flutter project CLEAN architecture using GetX pattern
 
 ## Used packages
 
-* Using mockito, and build_runner to handle unit-test
+* Using mockito, http, and build_runner to handle unit-test
 * Using GetX as binding
 * Using dartz to error-handling
 * Using freezed to reduce coding for models, and classes.

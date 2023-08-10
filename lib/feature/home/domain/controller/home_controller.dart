@@ -59,18 +59,18 @@ class HomeController extends BaseController {
   void initFilterData() {
     filterListModel.addAll([
       FilterItemModel(
-        title: 'Top Market Caps'.tr,
+        title: 'homeFilterTopMarketCap'.tr,
         sortBy: 'market_cap',
         sortType: 'desc',
         selected: true,
       ),
       FilterItemModel(
-        title: 'Top Gainers'.tr,
+        title: 'homeFilterTopGainers'.tr,
         sortBy: 'percent_change_24h',
         sortType: 'desc',
       ),
       FilterItemModel(
-        title: 'Top Losers'.tr,
+        title: 'homeFilterTopLosers'.tr,
         sortBy: 'percent_change_24h',
         sortType: 'asc',
       ),
@@ -84,7 +84,7 @@ class HomeController extends BaseController {
         if ((scrollController.position.extentAfter < 300) &&
             !loadingClause() &&
             !paginateLoadingClause() &&
-            await connectionChecker(Get.context!)) {
+            await connectionChecker()) {
           getCrypto(type: PaginationType.paginate);
         }
       },
@@ -99,7 +99,7 @@ class HomeController extends BaseController {
       setConnectionErrorClause(false);
       setExceptionErrorClause(false);
 
-      if (!await connectionChecker(Get.context!)) {
+      if (!await connectionChecker()) {
         setConnectionErrorClause(true);
         return;
       }
@@ -174,9 +174,9 @@ class HomeController extends BaseController {
   }
 
   /// handle internet connection status
-  Future<bool> connectionChecker(BuildContext context) async {
+  Future<bool> connectionChecker() async {
     return await Get.find<ConnectionCore>()
-        .hasConnection(context, showSnackBar: false);
+        .hasConnection(Get.context!, showSnackBar: false);
   }
 
   bool connectionErrorClause() {

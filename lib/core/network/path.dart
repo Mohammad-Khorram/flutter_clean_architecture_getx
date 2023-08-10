@@ -5,7 +5,8 @@ class PathCore {
   // home
   static const home = '$mainUrl$apiVer/cryptocurrency/listing';
 
-  // auth
+  // user
+  static const register = '$mainUrl/auth/login';
   static const login = '$mainUrl/auth/login';
 
   // profile

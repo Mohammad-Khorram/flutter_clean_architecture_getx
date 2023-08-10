@@ -20,7 +20,7 @@ class LanguageView extends BaseView<LanguageController> {
   PreferredSizeWidget appBarView() {
     return AppBarWidget().appBar(
       title: AppBarWidget().appBarTitle(title: 'languageTitle'.tr),
-      leading: AppBarWidget().backAction(),
+      hasBackAction: true,
     );
   }
 

@@ -1,7 +1,4 @@
 import 'package:crypto_currency/config/boiler/base_boiler.dart';
-import 'package:crypto_currency/config/boiler/controller_boiler.dart';
-import 'package:crypto_currency/config/boiler/repository_boiler.dart';
-import 'package:crypto_currency/config/boiler/util_boiler.dart';
 import 'package:crypto_currency/config/routing/route.dart';
 import 'package:get/get.dart';
 

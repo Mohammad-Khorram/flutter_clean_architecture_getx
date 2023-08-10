@@ -19,7 +19,7 @@ class TermsView extends BaseView<TermsController> {
   PreferredSizeWidget appBarView() {
     return AppBarWidget().appBar(
       title: AppBarWidget().appBarTitle(title: ''.tr),
-      leading: AppBarWidget().backAction(),
+      hasBackAction: true,
     );
   }
 

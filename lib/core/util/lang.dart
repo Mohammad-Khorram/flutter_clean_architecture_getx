@@ -23,6 +23,11 @@ class LangCore extends Translations {
           'parsingDataError': 'Sorry, there was an error parsing the data. Please try again later.\nIf you continue to see this error, please contact our support team for assistance.',
           'errorAction': 'Try again',
 
+          // home
+          'homeFilterTopMarketCap': 'Top market caps',
+          'homeFilterTopGainers': 'Top gainers',
+          'homeFilterTopLosers': 'Top losers',
+
           // user
           'userTitle': 'User',
 
