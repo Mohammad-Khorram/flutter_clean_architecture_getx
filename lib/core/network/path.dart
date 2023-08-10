@@ -3,7 +3,7 @@ class PathCore {
   static const apiVer = '/v3';
 
   // home
-  static const home = '$mainUrl$apiVer/cryptocurrency/listing?start=1&limit=10';
+  static const home = '$mainUrl$apiVer/cryptocurrency/listing';
 
   // auth
   static const login = '$mainUrl/auth/login';

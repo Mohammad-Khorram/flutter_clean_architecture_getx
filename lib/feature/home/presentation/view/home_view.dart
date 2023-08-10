@@ -1,6 +1,7 @@
 import 'package:crypto_currency/config/boiler/base_boiler.dart';
 import 'package:crypto_currency/config/boiler/controller_boiler.dart';
 import 'package:crypto_currency/config/boiler/resource_boiler.dart';
+import 'package:crypto_currency/config/boiler/util_boiler.dart';
 import 'package:crypto_currency/config/boiler/widget_boiler.dart';
 import 'package:crypto_currency/config/routing/route.dart';
 import 'package:crypto_currency/feature/home/presentation/widget/crypto_item.dart';
@@ -21,7 +22,9 @@ class HomeView extends BaseView<HomeController> {
   }
 
   PreferredSizeWidget? appBarView() {
-    return controller.isLoadingClause()
+    return controller.loadingClause() ||
+            controller.exceptionErrorClause() ||
+            controller.connectionErrorClause()
         ? null
         : AppBarWidget().appBar(
             title: AppBarWidget().appBarTitle(title: 'appName'.tr),
@@ -36,19 +39,28 @@ class HomeView extends BaseView<HomeController> {
   }
 
   Widget bodyView() {
-    return controller.isLoadingClause()
+    return controller.loadingClause()
         ? loading()
-        : DelayedWidget(
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  filter(),
-                  SizedBox(height: SizeConfig.s08.r),
-                  list(),
-                ],
-              ),
-            ),
-          );
+        : controller.exceptionErrorClause()
+            ? ShowErrorCore.exceptionErrorView(
+                message: controller.errorMessage!,
+                onTap: controller.getCrypto,
+              )
+            : controller.connectionErrorClause()
+                ? ShowErrorCore.connectionErrorView(onTap: controller.getCrypto)
+                : DelayedWidget(
+                    child: SingleChildScrollView(
+                      controller: controller.scrollController,
+                      child: Column(
+                        children: [
+                          filter(),
+                          SizedBox(height: SizeConfig.s08.r),
+                          list(),
+                          paginateLoading(),
+                        ],
+                      ),
+                    ),
+                  );
   }
 
   Widget filter() {
@@ -57,11 +69,21 @@ class HomeView extends BaseView<HomeController> {
 
   Widget list() {
     return ListView.builder(
-      itemCount: controller.cryptoResponseModel.data!.cryptoCurrencyList!.length,
+      itemCount: controller.cryptoCurrencyList.length,
       shrinkWrap: true,
-      itemBuilder: (context, index) => CryptoItem(
-          index: index,
-          model: controller.cryptoResponseModel.data!.cryptoCurrencyList![index]),
+      physics: const NeverScrollableScrollPhysics(),
+      itemBuilder: (context, index) =>
+          CryptoItem(model: controller.cryptoCurrencyList[index]),
+    );
+  }
+
+  Widget paginateLoading() {
+    return Visibility(
+      visible: controller.paginateLoadingClause(),
+      child: Padding(
+        padding: const EdgeInsets.only(top: 12, bottom: 24),
+        child: LoadingWidget().paginate(),
+      ),
     );
   }
 }

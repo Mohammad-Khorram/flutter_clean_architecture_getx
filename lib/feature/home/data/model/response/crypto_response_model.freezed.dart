@@ -382,7 +382,8 @@ mixin _$CryptoCurrencyItem {
   int? get cmcRank => throw _privateConstructorUsedError;
   int? get marketPairCount => throw _privateConstructorUsedError;
   double? get circulatingSupply => throw _privateConstructorUsedError;
-  int? get selfReportedCirculatingSupply => throw _privateConstructorUsedError;
+  double? get selfReportedCirculatingSupply =>
+      throw _privateConstructorUsedError;
   double? get totalSupply => throw _privateConstructorUsedError;
   double? get maxSupply => throw _privateConstructorUsedError;
   int? get isActive => throw _privateConstructorUsedError;
@@ -413,7 +414,7 @@ abstract class $CryptoCurrencyItemCopyWith<$Res> {
       int? cmcRank,
       int? marketPairCount,
       double? circulatingSupply,
-      int? selfReportedCirculatingSupply,
+      double? selfReportedCirculatingSupply,
       double? totalSupply,
       double? maxSupply,
       int? isActive,
@@ -491,7 +492,7 @@ class _$CryptoCurrencyItemCopyWithImpl<$Res, $Val extends CryptoCurrencyItem>
       selfReportedCirculatingSupply: freezed == selfReportedCirculatingSupply
           ? _value.selfReportedCirculatingSupply
           : selfReportedCirculatingSupply // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       totalSupply: freezed == totalSupply
           ? _value.totalSupply
           : totalSupply // ignore: cast_nullable_to_non_nullable
@@ -545,7 +546,7 @@ abstract class _$$_CryptoCurrencyItemCopyWith<$Res>
       int? cmcRank,
       int? marketPairCount,
       double? circulatingSupply,
-      int? selfReportedCirculatingSupply,
+      double? selfReportedCirculatingSupply,
       double? totalSupply,
       double? maxSupply,
       int? isActive,
@@ -621,7 +622,7 @@ class __$$_CryptoCurrencyItemCopyWithImpl<$Res>
       selfReportedCirculatingSupply: freezed == selfReportedCirculatingSupply
           ? _value.selfReportedCirculatingSupply
           : selfReportedCirculatingSupply // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       totalSupply: freezed == totalSupply
           ? _value.totalSupply
           : totalSupply // ignore: cast_nullable_to_non_nullable
@@ -711,7 +712,7 @@ class _$_CryptoCurrencyItem implements _CryptoCurrencyItem {
   @override
   final double? circulatingSupply;
   @override
-  final int? selfReportedCirculatingSupply;
+  final double? selfReportedCirculatingSupply;
   @override
   final double? totalSupply;
   @override
@@ -832,7 +833,7 @@ abstract class _CryptoCurrencyItem implements CryptoCurrencyItem {
       final int? cmcRank,
       final int? marketPairCount,
       final double? circulatingSupply,
-      final int? selfReportedCirculatingSupply,
+      final double? selfReportedCirculatingSupply,
       final double? totalSupply,
       final double? maxSupply,
       final int? isActive,
@@ -862,7 +863,7 @@ abstract class _CryptoCurrencyItem implements CryptoCurrencyItem {
   @override
   double? get circulatingSupply;
   @override
-  int? get selfReportedCirculatingSupply;
+  double? get selfReportedCirculatingSupply;
   @override
   double? get totalSupply;
   @override

@@ -42,11 +42,11 @@ class UserView extends BaseView<UserController> {
               onTap: controller.navigateToRegister,
               type: ItemDividerType.separator,
             ),
-            UserItem(
+            /*UserItem(
               icon: Ionicons.person_outline,
               title: 'profileTitle'.tr,
               onTap: controller.navigateToProfile,
-            ),
+            ),*/
             GetBuilder<LanguageController>(
               builder: (_) => UserItem(
                 icon: Ionicons.language_outline,

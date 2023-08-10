@@ -8,6 +8,7 @@ class MainBinding implements Bindings {
   void dependencies() {
     Get.lazyPut(DioCore.new, fenix: true);
     Get.lazyPut(SecureStorageCore.new, fenix: true);
+    Get.lazyPut(ConnectionCore.new, fenix: true);
 
     HomeBinding().dependencies();
     UserBinding().dependencies();

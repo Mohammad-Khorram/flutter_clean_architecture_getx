@@ -49,7 +49,7 @@ _$_CryptoCurrencyItem _$$_CryptoCurrencyItemFromJson(
       marketPairCount: json['marketPairCount'] as int?,
       circulatingSupply: (json['circulatingSupply'] as num?)?.toDouble(),
       selfReportedCirculatingSupply:
-          json['selfReportedCirculatingSupply'] as int?,
+          (json['selfReportedCirculatingSupply'] as num?)?.toDouble(),
       totalSupply: (json['totalSupply'] as num?)?.toDouble(),
       maxSupply: (json['maxSupply'] as num?)?.toDouble(),
       isActive: json['isActive'] as int?,
