@@ -30,23 +30,12 @@ class UserView extends BaseView<UserController> {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            // todo handle logic of loggedUser
-            UserItem(
-              icon: Ionicons.log_in_outline,
-              title: 'loginPrompt'.tr,
-              onTap: controller.navigateToLogin,
-            ),
             UserItem(
               icon: Ionicons.key_outline,
               title: 'registerPrompt'.tr,
               onTap: controller.navigateToRegister,
               type: ItemDividerType.separator,
             ),
-            /*UserItem(
-              icon: Ionicons.person_outline,
-              title: 'profileTitle'.tr,
-              onTap: controller.navigateToProfile,
-            ),*/
             GetBuilder<LanguageController>(
               builder: (_) => UserItem(
                 icon: Ionicons.language_outline,

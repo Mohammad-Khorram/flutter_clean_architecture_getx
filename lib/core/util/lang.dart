@@ -36,7 +36,7 @@ class LangCore extends Translations {
           'loginTitle': 'Login',
           'loginUsername': 'Username',
           'loginPassword': 'Password',
-          'forgetPass': 'Forget password?',
+          'loginForgetPass': 'Forget password?',
           'loginAction': 'Submit',
           'loginRegisterHint1': 'Don\'t have an account? ',
           'loginRegisterHint2': 'Register',
@@ -44,6 +44,12 @@ class LangCore extends Translations {
           // register
           'registerPrompt': 'Create an account',
           'registerTitle': 'Register',
+          'registerName': 'Name',
+          'registerEmail': 'Email',
+          'registerPassword': 'Password',
+          'registerAction': 'Submit',
+          'registerLoginHint1': 'Already have an account? ',
+          'registerLoginHint2': 'Login',
 
           // profile
           'profileTitle': 'Profile',

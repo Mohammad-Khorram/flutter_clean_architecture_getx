@@ -19,7 +19,7 @@ class RegisterView extends BaseView<RegisterController> {
 
   PreferredSizeWidget? appBarView() {
     return AppBarWidget().appBar(
-      title: AppBarWidget().appBarTitle(title: ''.tr),
+      title: AppBarWidget().appBarTitle(title: 'registerTitle'.tr),
       hasBackAction: true,
     );
   }
@@ -38,9 +38,7 @@ class RegisterView extends BaseView<RegisterController> {
           email(),
           SizedBox(height: SizeConfig.s16.r),
           password(),
-          SizedBox(height: SizeConfig.s16.r),
-          forgetPass(),
-          SizedBox(height: SizeConfig.s44.r),
+          SizedBox(height: SizeConfig.s56.r),
           action(),
           SizedBox(height: SizeConfig.s20.r),
           registerHint(),
@@ -67,18 +65,18 @@ class RegisterView extends BaseView<RegisterController> {
   Widget name() {
     return TextFormFieldWidget(
       controller: controller.nameController,
-      labelText: 'loginUsername'.tr,
+      labelText: 'registerName'.tr,
       textInputAction: TextInputAction.next,
-      // readOnly: status is LoginLoading,
+      readOnly: controller.loadingClause(),
     );
   }
 
   Widget email() {
     return TextFormFieldWidget(
       controller: controller.emailController,
-      labelText: 'emailUsername'.tr,
+      labelText: 'registerEmail'.tr,
       textInputAction: TextInputAction.next,
-      // readOnly: status is LoginLoading,
+      readOnly: controller.loadingClause(),
     );
   }
 
@@ -89,10 +87,10 @@ class RegisterView extends BaseView<RegisterController> {
       children: [
         TextFormFieldWidget(
           controller: controller.passwordController,
-          labelText: 'loginPassword'.tr,
-          // obscureText: !passwordVisibility,
+          labelText: 'registerPassword'.tr,
+          obscureText: !controller.passwordVisibilityClause(),
           textInputAction: TextInputAction.done,
-          // readOnly: status is LoginLoading,
+          readOnly: controller.loadingClause(),
         ),
         Padding(
           padding: SpacingConfig.s08Horizontal,
@@ -103,8 +101,9 @@ class RegisterView extends BaseView<RegisterController> {
               onTap: controller.togglePasswordVisibility,
               borderRadius: RadiusConfig.r07All,
               child: Icon(
-                // passwordVisibility ? Ionicons.eye_outline : Ionicons.eye,
-                Ionicons.eye,
+                !controller.passwordVisibilityClause()
+                    ? Ionicons.eye_outline
+                    : Ionicons.eye,
                 size: SizeConfig.s16.r,
                 color: ColorConfig.color100,
               ),
@@ -115,23 +114,11 @@ class RegisterView extends BaseView<RegisterController> {
     );
   }
 
-  Widget forgetPass() {
-    return GestureDetector(
-      onTap: controller.navigateToForgetPass,
-      child: Align(
-        alignment: 'direction'.tr == 'ltr'
-            ? Alignment.centerLeft
-            : Alignment.centerRight,
-        child: Text('forgetPass'.tr, style: TextStyleConfig.loginForgetPass),
-      ),
-    );
-  }
-
   Widget action() {
     return ElevatedActionWidget().elevatedAction(
-      title: 'loginAction'.tr,
+      title: 'registerAction'.tr,
       action: controller.register,
-      // loading: status is LoginLoading,
+      loading: controller.loadingClause(),
     );
   }
 
@@ -140,13 +127,13 @@ class RegisterView extends BaseView<RegisterController> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'loginRegisterHint1'.tr,
+          'registerLoginHint1'.tr,
           style: TextStyleConfig.loginRegisterHint1,
         ),
         GestureDetector(
           onTap: controller.navigateToLogin,
           child: Text(
-            'loginRegisterHint2'.tr,
+            'registerLoginHint2'.tr,
             style: TextStyleConfig.loginRegisterHint2,
           ),
         ),

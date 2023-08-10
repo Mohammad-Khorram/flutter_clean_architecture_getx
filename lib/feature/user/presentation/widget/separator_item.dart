@@ -13,6 +13,6 @@ class SeparatorItem extends StatefulWidget {
 class _SeparatorItemState extends State<SeparatorItem> {
   @override
   Widget build(BuildContext context) {
-    return DividerWidget().horizontal(thickness: SizeConfig.s08.r);
+    return DividerWidget().horizontal(thickness: SizeConfig.s09.r);
   }
 }

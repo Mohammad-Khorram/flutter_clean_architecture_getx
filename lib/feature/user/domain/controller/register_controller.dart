@@ -2,7 +2,10 @@ import 'package:crypto_currency/config/boiler/base_boiler.dart';
 import 'package:crypto_currency/config/boiler/model_boiler.dart';
 import 'package:crypto_currency/config/boiler/repository_boiler.dart';
 import 'package:crypto_currency/config/boiler/util_boiler.dart';
+import 'package:crypto_currency/config/boiler/widget_boiler.dart';
 import 'package:crypto_currency/config/routing/route.dart';
+import 'package:crypto_currency/core/network/network_exception.dart';
+import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -15,12 +18,13 @@ class RegisterController extends BaseController {
   // data_models
 
   // values
-  String defaultName = 'mor_2314';
-  String defaultEmail = 'mor_2314';
+  String defaultName = 'Mohammad khorram';
+  String defaultEmail = 'mr.mohammadkhorram@gmail.com';
   String defaultPassword = '83r5^_';
 
   // bool_values
-  RxBool loading = true.obs;
+  RxBool loading = false.obs;
+  RxBool passwordVisibility = false.obs;
 
   RegisterController(this._repo);
 
@@ -39,48 +43,63 @@ class RegisterController extends BaseController {
   }
 
   /// handle password visibility
-  void togglePasswordVisibility() {}
-
-  /// not_implemented
-  void navigateToForgetPass() {
-    /*if (status is LoginLoading) {
-      return;
-    }
-
-    Get.toNamed(RouteConfig.forgetPass);*/
-  }
+  void togglePasswordVisibility() =>
+      setPasswordVisibilityClause(!passwordVisibilityClause());
 
   /// not_implemented
   void navigateToLogin() {
-    /*if (status is LoginLoading) {
+    if (loadingClause()) {
       return;
-    }*/
+    }
 
-    Get.toNamed(RouteConfig.login);
+    // Get.toNamed(RouteConfig.login);
   }
 
   /// handle user register
   void register() async {
-    if (!await connectionChecker()) {
-      return;
+    try {
+      if (!await connectionChecker()) {
+        return;
+      }
+
+      setLoadingClause(true);
+
+      RegisterRequestModel registerRequestModel = RegisterRequestModel(
+          name: nameController.text,
+          email: emailController.text,
+          password: passwordController.text);
+
+      Either<NetworkException, RegisterResponseModel> response =
+          await _repo.register(registerRequestModel: registerRequestModel);
+
+      response.fold(
+        (failure) {
+          /// handle exception for show to the end user
+          ShowErrorCore.generalErrorSnackBar(
+              context: Get.context!, message: failure.message);
+        },
+        (result) => Get.back(),
+      );
+    } on NetworkException catch (ex) {
+      /// handle exception for show to the end user
+      ShowErrorCore.generalErrorSnackBar(
+          context: Get.context!, message: ex.message);
+    } finally {
+      setLoadingClause(false);
     }
-
-    RegisterRequestModel registerRequestModel = RegisterRequestModel(
-        name: nameController.text,
-        email: emailController.text,
-        password: passwordController.text);
-
-    /*
-     InjectionCore.instance<UserCore>()
-        .saveToken(token: loginResponseEntity.token!);
-    InjectionCore.instance<UserCubit>().login(true);
-    Get.back();
-    */
   }
 
   /// handle internet connection status
   Future<bool> connectionChecker() async =>
       await Get.find<ConnectionCore>().hasConnection(Get.context!);
+
+  bool passwordVisibilityClause() {
+    return passwordVisibility.value;
+  }
+
+  void setPasswordVisibilityClause(bool value) {
+    passwordVisibility.value = value;
+  }
 
   bool loadingClause() {
     return loading.value;
