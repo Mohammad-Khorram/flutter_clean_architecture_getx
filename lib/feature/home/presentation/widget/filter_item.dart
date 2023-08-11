@@ -1,5 +1,6 @@
 import 'package:crypto_currency/config/boiler/model_boiler.dart';
 import 'package:crypto_currency/config/boiler/resource_boiler.dart';
+import 'package:crypto_currency/core/util/string.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -18,11 +19,11 @@ class FilterItem extends StatelessWidget {
         border: Border.all(color: ColorConfig.dark, width: SizeConfig.s01.r),
         borderRadius: RadiusConfig.r24All,
       ),
-      child: content(),
+      child: title(),
     );
   }
 
-  Widget content() {
+  Widget title() {
     return InkWell(
       onTap: onTap,
       borderRadius: RadiusConfig.r24All,
@@ -31,11 +32,9 @@ class FilterItem extends StatelessWidget {
         alignment: Alignment.center,
         padding: SpacingConfig.s12Horizontal,
         child: Text(
-          model.title,
-          style: TextStyle(
-            fontSize: SizeConfig.s10.sp,
-            color: model.selected ? ColorConfig.white : ColorConfig.dark,
-          ),
+          StringCore().convertHomeFilterToSpecifiedLanguage(model.title),
+          style: TextStyleConfig.filterTitle.copyWith(
+              color: model.selected ? ColorConfig.white : ColorConfig.dark),
         ),
       ),
     );

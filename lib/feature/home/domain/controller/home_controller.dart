@@ -58,26 +58,24 @@ class HomeController extends BaseController {
 
   /// create local filter items
   void initFilterData() {
-    filterListModel.addAll([
+    filterListModel.addAll(const [
       FilterItemModel(
-        title: 'homeFilterTopMarketCap'.tr,
+        title: 'Top market caps',
         sortBy: 'market_cap',
         sortType: 'desc',
         selected: true,
       ),
       FilterItemModel(
-        title: 'homeFilterTopGainers'.tr,
+        title: 'Top gainers',
         sortBy: 'percent_change_24h',
         sortType: 'desc',
       ),
       FilterItemModel(
-        title: 'homeFilterTopLosers'.tr,
+        title: 'Top losers',
         sortBy: 'percent_change_24h',
         sortType: 'asc',
       ),
     ]);
-
-
   }
 
   /// handle pagination

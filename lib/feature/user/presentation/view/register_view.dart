@@ -57,7 +57,7 @@ class RegisterView extends BaseView<RegisterController> {
           size: SizeConfig.s32.r,
         ),
         SizedBox(width: SizeConfig.s14.r),
-        Text('appName'.tr, style: TextStyleConfig.loginTitle),
+        Text('appName'.tr, style: TextStyleConfig.registerTitle),
       ],
     );
   }
@@ -128,13 +128,13 @@ class RegisterView extends BaseView<RegisterController> {
       children: [
         Text(
           'registerLoginHint1'.tr,
-          style: TextStyleConfig.loginRegisterHint1,
+          style: TextStyleConfig.registerLoginHint1,
         ),
         GestureDetector(
           onTap: controller.navigateToLogin,
           child: Text(
             'registerLoginHint2'.tr,
-            style: TextStyleConfig.loginRegisterHint2,
+            style: TextStyleConfig.registerLoginHint1,
           ),
         ),
       ],

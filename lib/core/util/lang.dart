@@ -23,11 +23,6 @@ class LangCore extends Translations {
           'parsingDataError': 'Sorry, there was an error parsing the data. Please try again later.\nIf you continue to see this error, please contact our support team for assistance.',
           'errorAction': 'Try again',
 
-          // home
-          'homeFilterTopMarketCap': 'Top market caps',
-          'homeFilterTopGainers': 'Top gainers',
-          'homeFilterTopLosers': 'Top losers',
-
           // user
           'userTitle': 'User',
 
@@ -79,11 +74,6 @@ class LangCore extends Translations {
           'badRequestError': 'درخواست شما نامعتبر است. لطفاً درخواست را بررسی کرده و دوباره امتحان کنید.',
           'parsingDataError': 'با عرض پوزش، در تجزیه داده\u200cها خطایی رخ داده است. لطفاً بعداً دوباره امتحان کنید.\nاگر هم\u200cچنان این خطا را مشاهده می‌کنید، لطفاً برای کمک با تیم پشتیبانی ما تماس بگیرید.',
           'errorAction': 'تلاش مجدد',
-
-          // home
-          'homeFilterTopMarketCap': 'ارزهای برتر',
-          'homeFilterTopGainers': 'بیشترین سود',
-          'homeFilterTopLosers': 'بیشترین ضرر',
 
           // user
           'userTitle': 'ناحیه کاربری',
@@ -137,11 +127,6 @@ class LangCore extends Translations {
           'parsingDataError': 'آسف، حدث خطأ في تحليل البيانات. يرجى المحاولة مرة أخرى لاحقًا.\nإذا استمر ظهور هذا الخطأ، فيرجى الاتصال بفريق الدعم للحصول على المساعدة.',
           'errorAction': 'حاول ثانية',
 
-          // home
-          'homeFilterTopMarketCap': 'أعلى سقف لسعر السوق',
-          'homeFilterTopGainers': 'كبار الرابحين',
-          'homeFilterTopLosers': 'أكبر الخاسرين',
-
           // user
           'userTitle': 'مستخدم',
 
@@ -193,11 +178,6 @@ class LangCore extends Translations {
           'badRequestError': 'La solicitud no era válida. Verifique la solicitud y vuelva a intentarlo.',
           'parsingDataError': 'Lo sentimos, hubo un error al analizar los datos. Vuelva a intentarlo más tarde.\nSi continúa viendo este error, comuníquese con nuestro equipo de soporte para obtener ayuda.',
           'errorAction': 'TIntentar otra vez',
-
-          // home
-          'homeFilterTopMarketCap': 'Capitalización de mercado superior',
-          'homeFilterTopGainers': 'Mejores ganadores',
-          'homeFilterTopLosers': 'grandes perdedores',
 
           // user
           'userTitle': 'Usuario',
@@ -251,11 +231,6 @@ class LangCore extends Translations {
           'parsingDataError': 'Désolé, une erreur s\'est produite lors de l\'analyse des données. Veuillez réessayer plus tard.\nSi vous continuez à voir cette erreur, veuillez contacter notre équipe d\'assistance pour obtenir de l\'aide.',
           'errorAction': 'Essayer à nouveau',
 
-          // home
-          'homeFilterTopMarketCap': 'Top capitalisations boursières',
-          'homeFilterTopGainers': 'Meilleurs gagnants',
-          'homeFilterTopLosers': 'Principaux perdants',
-
           // user
           'userTitle': 'Utilisateur',
 
@@ -308,11 +283,6 @@ class LangCore extends Translations {
           'parsingDataError': '抱歉，解析数据时出错。 请稍后重试。\n如果您仍然看到此错误，请联系我们的支持团队寻求帮助。',
           'errorAction': '再试一次',
 
-          // home
-          'homeFilterTopMarketCap': '最高市值',
-          'homeFilterTopGainers': '涨幅居前者',
-          'homeFilterTopLosers': '最大输家',
-
           // user
           'userTitle': '用户',
 
@@ -364,11 +334,6 @@ class LangCore extends Translations {
           'badRequestError': 'अनुरोध अमान्य था. कृपया अनुरोध की जाँच करें और पुनः प्रयास करें।',
           'parsingDataError': 'क्षमा करें, डेटा पार्स करने में त्रुटि हुई। कृपया बाद में पुनः प्रयास करें।\nयदि आपको यह त्रुटि दिखाई देती रहती है, तो कृपया सहायता के लिए हमारी सहायता टीम से संपर्क करें।',
           'errorAction': 'पुनः प्रयास करें',
-
-          // home
-          'homeFilterTopMarketCap': 'शीर्ष मार्केट कैप',
-          'homeFilterTopGainers': 'शीर्ष लाभ पाने वाले',
-          'homeFilterTopLosers': 'शीर्ष हारने वाले',
 
           // user
           'userTitle': 'उपयोगकर्ता',

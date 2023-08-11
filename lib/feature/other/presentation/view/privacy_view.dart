@@ -40,13 +40,7 @@ class PrivacyView extends BaseView<PrivacyController> {
   }
 
   Widget title() {
-    return Text(
-      'privacyTitle'.tr,
-      style: TextStyle(
-        fontSize: SizeConfig.s16.sp,
-        fontWeight: FontWeight.bold,
-      ),
-    );
+    return Text('privacyTitle'.tr, style: TextStyleConfig.otherTitle);
   }
 
   Widget divide() {
@@ -63,7 +57,7 @@ class PrivacyView extends BaseView<PrivacyController> {
       child: SingleChildScrollView(
         child: Text(
           'privacyDescription'.tr,
-          style: TextStyle(fontSize: SizeConfig.s13.sp, height: 1.8),
+          style: TextStyleConfig.otherContent,
           textAlign: TextAlign.justify,
         ),
       ),

@@ -9,9 +9,6 @@ class ThemeConfig {
     visualDensity: VisualDensity.adaptivePlatformDensity,
     snackBarTheme:
         SnackBarThemeData(contentTextStyle: TextStyleConfig.snackBarStyle),
-    navigationBarTheme: NavigationBarThemeData(
-        labelTextStyle: MaterialStateProperty.all(
-            TextStyleConfig.bottomNavigationBarStyle)),
     brightness: Brightness.light,
   );
 
@@ -22,9 +19,6 @@ class ThemeConfig {
     visualDensity: VisualDensity.adaptivePlatformDensity,
     snackBarTheme:
         SnackBarThemeData(contentTextStyle: TextStyleConfig.snackBarStyle),
-    navigationBarTheme: NavigationBarThemeData(
-        labelTextStyle: MaterialStateProperty.all(
-            TextStyleConfig.bottomNavigationBarStyle)),
     brightness: Brightness.dark,
   );
 }

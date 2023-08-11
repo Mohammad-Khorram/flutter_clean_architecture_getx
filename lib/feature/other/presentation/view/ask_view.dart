@@ -40,13 +40,7 @@ class AskView extends BaseView<AskController> {
   }
 
   Widget title() {
-    return Text(
-      'askTitle'.tr,
-      style: TextStyle(
-        fontSize: SizeConfig.s16.sp,
-        fontWeight: FontWeight.bold,
-      ),
-    );
+    return Text('askTitle'.tr, style: TextStyleConfig.otherTitle);
   }
 
   Widget divide() {
@@ -63,7 +57,7 @@ class AskView extends BaseView<AskController> {
       child: SingleChildScrollView(
         child: Text(
           'askDescription'.tr,
-          style: TextStyle(fontSize: SizeConfig.s13.sp, height: 1.8),
+          style: TextStyleConfig.otherContent,
           textAlign: TextAlign.justify,
         ),
       ),

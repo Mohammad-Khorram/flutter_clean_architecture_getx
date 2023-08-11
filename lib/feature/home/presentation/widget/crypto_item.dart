@@ -60,13 +60,7 @@ class CryptoItem extends StatelessWidget {
   }
 
   Widget indexView() {
-    return Text(
-      '#${index + 1}',
-      style: TextStyle(
-        fontSize: SizeConfig.s11.sp,
-        color: ColorConfig.color175,
-      ),
-    );
+    return Text('#${index + 1}', style: TextStyleConfig.cryptoIndex);
   }
 
   Widget image() {
@@ -79,34 +73,17 @@ class CryptoItem extends StatelessWidget {
   }
 
   Widget name() {
-    return Text(
-      model.name!,
-      style: TextStyle(
-        fontSize: SizeConfig.s12.sp,
-        color: ColorConfig.dark,
-        fontWeight: FontWeight.bold,
-      ),
-    );
+    return Text(model.name!, style: TextStyleConfig.cryptoName);
   }
 
   Widget symbol() {
-    return Text(
-      model.symbol!,
-      style: TextStyle(
-        fontSize: SizeConfig.s10.sp,
-        color: ColorConfig.color175,
-      ),
-    );
+    return Text(model.symbol!, style: TextStyleConfig.cryptoSymbol);
   }
 
   Widget price() {
     return Text(
       '\$${DecimalCore().removeDecimalPrice(model.quotes![0].price!)}',
-      style: TextStyle(
-        fontSize: SizeConfig.s12.sp,
-        color: ColorConfig.dark,
-        fontWeight: FontWeight.bold,
-      ),
+      style: TextStyleConfig.cryptoPrice,
     );
   }
 
@@ -119,10 +96,8 @@ class CryptoItem extends StatelessWidget {
         SizedBox(width: SizeConfig.s03.r),
         Text(
           '${DecimalCore().removeDecimalPercent(percent24)}%',
-          style: TextStyle(
-            fontSize: SizeConfig.s10.sp,
-            color: DecimalCore().percentChangesColor(percent24),
-          ),
+          style: TextStyleConfig.cryptoRate
+              .copyWith(color: DecimalCore().percentChangesColor(percent24)),
         ),
       ],
     );

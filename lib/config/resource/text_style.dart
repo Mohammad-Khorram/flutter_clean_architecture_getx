@@ -15,12 +15,7 @@ class TextStyleConfig {
 
   static final errorStyle = TextStyle(fontSize: SizeConfig.s11.sp, height: 2);
 
-  static final bottomNavigationBarStyle =
-      TextStyle(fontSize: SizeConfig.s10_5.sp);
-
-  static const elevatedActionTitle = TextStyle(color: ColorConfig.white
-      // fontWeight: FontWeight.bold,
-      );
+  static const elevatedActionTitle = TextStyle(color: ColorConfig.white);
 
   static final textFormFieldErrorStyle = TextStyle(
     fontSize: SizeConfig.s12.sp,
@@ -59,52 +54,37 @@ class TextStyleConfig {
     borderRadius: RadiusConfig.r08All,
   );
 
-  static TextStyle bottomSheetTitleStyle = TextStyle(
-    fontSize: SizeConfig.s14.r,
-    fontWeight: FontWeight.bold,
-  );
-
-  static TextStyle bottomSheetContentStyle =
-      TextStyle(fontSize: SizeConfig.s11.r);
-
-  static TextStyle bottomSheetContentBoldStyle = TextStyle(
-    fontSize: SizeConfig.s11.r,
-    fontWeight: FontWeight.bold,
-  );
-
   static final hintStyle = TextStyle(
     color: ColorConfig.hint,
     fontSize: SizeConfig.s13.sp,
     fontWeight: FontWeight.normal,
   );
 
-  static final categoryTitle = TextStyle(fontSize: SizeConfig.s13.sp);
+  static final cryptoIndex = TextStyle(
+    fontSize: SizeConfig.s11.sp,
+    color: ColorConfig.color175,
+  );
 
-  static final productItemTitle = TextStyle(fontSize: SizeConfig.s12.sp);
-
-  static final productItemRate = TextStyle(fontSize: SizeConfig.s10.sp);
-
-  static final productItemPrice = TextStyle(
+  static final cryptoName = TextStyle(
     fontSize: SizeConfig.s12.sp,
+    color: ColorConfig.dark,
     fontWeight: FontWeight.bold,
   );
 
-  static final productDetailsTitle = TextStyle(
-    fontSize: SizeConfig.s15.sp,
-    fontWeight: FontWeight.bold,
+  static final cryptoSymbol = TextStyle(
+    fontSize: SizeConfig.s10.sp,
+    color: ColorConfig.color175,
   );
 
-  static final productDetailsRate = TextStyle(fontSize: SizeConfig.s11.sp);
-
-  static final productDetailsDescription = TextStyle(
+  static final cryptoPrice = TextStyle(
     fontSize: SizeConfig.s12.sp,
-    height: 1.7,
-  );
-
-  static final productDetailsPrice = TextStyle(
-    fontSize: SizeConfig.s16.sp,
+    color: ColorConfig.dark,
     fontWeight: FontWeight.bold,
   );
+
+  static final cryptoRate = TextStyle(fontSize: SizeConfig.s10.sp);
+
+  static final filterTitle = TextStyle(fontSize: SizeConfig.s10.sp);
 
   static final userTitle = TextStyle(fontSize: SizeConfig.s13.sp);
 
@@ -113,30 +93,18 @@ class TextStyleConfig {
     color: ColorConfig.primary,
   );
 
-  static final loginTitle = TextStyle(
+  static final registerTitle = TextStyle(
     fontSize: SizeConfig.s26.sp,
     fontWeight: FontWeight.bold,
   );
 
-  static final loginForgetPass = TextStyle(
-    fontSize: SizeConfig.s11.sp,
-  );
-
-  static final loginRegisterHint1 = TextStyle(
+  static final registerLoginHint1 = TextStyle(
     fontSize: SizeConfig.s11.sp,
     color: ColorConfig.color150,
   );
 
-  static final loginRegisterHint2 = TextStyle(
+  static final registerLoginHint2 = TextStyle(
     fontSize: SizeConfig.s11.sp,
-    fontWeight: FontWeight.bold,
-  );
-
-  static final profileTitle = TextStyle(fontSize: SizeConfig.s11.sp);
-
-  static final profileValue = TextStyle(
-    fontSize: SizeConfig.s11.sp,
-    color: ColorConfig.primary,
     fontWeight: FontWeight.bold,
   );
 
@@ -147,10 +115,13 @@ class TextStyleConfig {
     fontWeight: FontWeight.bold,
   );
 
-  static final themeNormalStyle = TextStyle(fontSize: SizeConfig.s12.sp);
-
-  static final themeBoldStyle = TextStyle(
-    fontSize: SizeConfig.s12.sp,
+  static final otherTitle = TextStyle(
+    fontSize: SizeConfig.s16.sp,
     fontWeight: FontWeight.bold,
+  );
+
+  static final otherContent = TextStyle(
+    fontSize: SizeConfig.s13.sp,
+    height: 1.8,
   );
 }

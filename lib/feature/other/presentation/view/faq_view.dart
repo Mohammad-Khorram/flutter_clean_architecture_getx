@@ -40,13 +40,7 @@ class FaqView extends BaseView<FaqController> {
   }
 
   Widget title() {
-    return Text(
-      'faqTitle'.tr,
-      style: TextStyle(
-        fontSize: SizeConfig.s16.sp,
-        fontWeight: FontWeight.bold,
-      ),
-    );
+    return Text('faqTitle'.tr, style: TextStyleConfig.otherTitle);
   }
 
   Widget divide() {
@@ -63,7 +57,7 @@ class FaqView extends BaseView<FaqController> {
       child: SingleChildScrollView(
         child: Text(
           'faqDescription'.tr,
-          style: TextStyle(fontSize: SizeConfig.s13.sp, height: 1.8),
+          style: TextStyleConfig.otherContent,
           textAlign: TextAlign.justify,
         ),
       ),
